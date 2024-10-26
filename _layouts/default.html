@@ -88,23 +88,44 @@
     document.addEventListener("DOMContentLoaded", function() {
       const tocList = document.getElementById("toc-list");
       const headings = document.querySelectorAll(".content h2");
-
+  
       headings.forEach(heading => {
         const anchor = document.createElement("a");
         const listItem = document.createElement("li");
-
+  
         // Create a unique ID for each h2 heading
         const id = heading.textContent.toLowerCase().replace(/ /g, "-").replace(/[^\w-]+/g, "");
         heading.setAttribute("id", id);
-        
+  
         // Build TOC link
         anchor.href = `#${id}`;
         anchor.textContent = heading.textContent;
-        
+  
         listItem.appendChild(anchor);
         tocList.appendChild(listItem);
       });
+  
+      // Scroll-Spy Functionality
+      const tocLinks = tocList.querySelectorAll("a");
+      window.addEventListener("scroll", () => {
+        let fromTop = window.scrollY + 80;
+  
+        headings.forEach((heading, index) => {
+          const link = tocLinks[index];
+          const nextHeading = headings[index + 1];
+  
+          if (
+            (fromTop >= heading.offsetTop && !nextHeading) ||
+            (fromTop >= heading.offsetTop && fromTop < nextHeading.offsetTop)
+          ) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
     });
   </script>
+  
 </body>
 </html>

@@ -76,8 +76,8 @@ a:hover {
     position: fixed;
     top: 80px;
     height: calc(100vh - 80px);
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
     overflow-y: auto;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
 }
 
 .sidebar h2 {
@@ -133,6 +133,8 @@ a:hover {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: calc(100vh - 100px);
 }
 
 .toc h3 {
@@ -153,10 +155,16 @@ a:hover {
 .toc a {
     color: #007acc;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 .toc a:hover {
     color: #005f99;
+}
+
+.toc .active {
+    color: #2a4f7c;
+    font-weight: 700;
 }
 
 /* Footer */
