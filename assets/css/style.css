@@ -1,4 +1,4 @@
-/* Reset some basic elements */
+/* Basic Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,29 +6,21 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
     color: #333;
-}
-
-a {
-    color: #0056b3;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 /* Header */
 .site-header {
-    background-color: #0043a4;
+    background-color: #1f4e79;
     color: white;
     padding: 1rem 2rem;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -44,30 +36,35 @@ a:hover {
 
 .top-nav ul {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     list-style: none;
 }
 
 .top-nav ul li a {
     color: white;
-    font-weight: bold;
+    font-weight: 500;
+}
+
+.top-nav ul li a:hover {
+    color: #ffdd57;
 }
 
 /* Layout */
 .layout {
     display: flex;
-    margin-top: 80px; /* Adjust to match header height */
+    margin-top: 80px;
 }
 
 /* Sidebar */
 .sidebar {
     width: 250px;
-    background-color: #fff;
-    padding: 2rem 1rem;
+    background-color: #ffffff;
+    padding: 2rem;
     border-right: 1px solid #ddd;
     height: 100vh;
     position: sticky;
     top: 80px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h2 {
@@ -81,19 +78,25 @@ a:hover {
 }
 
 .sidebar-nav li {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
 }
 
 .sidebar-nav a {
-    color: #333;
+    color: #1f4e79;
     font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+    color: #ffdd57;
 }
 
 /* Main Content */
 .content {
     flex: 1;
     padding: 2rem;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 2rem;
@@ -101,14 +104,19 @@ a:hover {
 
 /* Footer */
 .site-footer {
-    background-color: #333;
+    background-color: #1f4e79;
     color: white;
     padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
 
 .footer-links h4 {
@@ -124,9 +132,10 @@ a:hover {
 }
 
 .footer-links a {
-    color: #ccc;
+    color: #ffdd57;
+    text-decoration: none;
 }
 
 .footer-links a:hover {
-    color: #fff;
+    color: white;
 }
