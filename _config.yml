@@ -1,0 +1,16 @@
+title: "Cloud Engineering Learning Path"
+description: "A step-by-step resource guide to transition from zero tech background to cloud engineering."
+baseurl: ""
+url: "https://mrcloudchase.github.io"
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-sitemap
+
+modules:
+  - title: "Module 1: Getting Started"
+    url: "/modules/module-1"
+  - title: "Module 2: Cloud Basics"
+    url: "/modules/module-2"
+  - title: "Module 3: DevOps Essentials"
+    url: "/modules/module-3"
