@@ -3,7 +3,7 @@ layout: default
 title: "Cloud Engineering Learning Path"
 ---
 
-# Cloud Engineering Learning Path
+<!-- # Cloud Engineering Learning Path -->
 
 Welcome to the Cloud Engineering Learning Path! This guide provides a step-by-step reference for free resources to help you transition from zero tech background to cloud engineering roles.
 
