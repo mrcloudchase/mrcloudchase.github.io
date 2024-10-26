@@ -6,6 +6,8 @@
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <!-- Header -->
@@ -13,14 +15,24 @@
     <div class="header-content">
       <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
       <nav class="top-nav">
-        <ul>
-          <li><a href="https://discord.com" target="_blank">Discord</a></li>
-          <li><a href="https://github.com/mrcloudchase" target="_blank">GitHub</a></li>
-          <li><a href="https://other-site.com" target="_blank">Other Site</a></li>
-        </ul>
+        <!-- Language Selector (Placeholder) -->
+        <div class="language-selector">
+          <span class="icon"><i class="fas fa-language"></i></span> English
+        </div>
+        <!-- External Links -->
+        <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+        <a href="https://github.com/mrcloudchase" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <!-- Dark Mode Toggle (Placeholder) -->
+        <div class="dark-mode-toggle">
+          <i class="fas fa-moon"></i>
+        </div>
         <!-- Search Bar -->
         <div class="search-container">
-          <input type="text" id="search-bar" placeholder="Search the docs...">
+          <i class="fas fa-search"></i>
+          <input type="text" id="search-bar" placeholder="Search">
+          <div class="search-shortcut">
+            <kbd>⌘</kbd> + <kbd>K</kbd>
+          </div>
         </div>
       </nav>
     </div>
@@ -29,12 +41,10 @@
   <!-- Main Content Area -->
   <main class="content">
     {% if page.url == "/" %}
-      <!-- Render the Homepage Content -->
       <section class="intro">
         {{ content }}
       </section>
     {% else %}
-      <!-- Render Regular Page Content -->
       <article>
         <h1>{{ page.title }}</h1>
         {{ content }}

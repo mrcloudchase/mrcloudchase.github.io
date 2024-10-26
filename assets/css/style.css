@@ -39,106 +39,74 @@ body {
 .top-nav {
     display: flex;
     align-items: center;
-    gap: 1rem;
-}
-
-.top-nav ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-}
-
-.top-nav ul li a {
+    gap: 1.5rem;
     color: white;
-    font-weight: 500;
 }
 
-.top-nav ul li a:hover {
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.top-nav a:hover {
     color: #ffdd57;
+}
+
+.language-selector, .dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.language-selector .icon, .dark-mode-toggle .icon {
+    margin-right: 0.5rem;
 }
 
 /* Search Bar */
 .search-container {
-    position: relative;
     display: flex;
     align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+    color: #2a4f7c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.search-container i {
+    color: #555;
+    margin-right: 0.3rem;
 }
 
 #search-bar {
-    width: 200px;
-    padding: 0.5rem;
-    border-radius: 20px;
-    border: 1px solid #ddd;
+    border: none;
     outline: none;
-    font-size: 0.9rem;
+    background: none;
+    padding: 0 0.3rem;
+    width: 80px;
     transition: width 0.3s ease;
 }
 
 #search-bar:focus {
-    width: 300px; /* Expands on focus */
-    border-color: #007acc;
+    width: 160px;
 }
 
-/* Main Content */
-.content {
-    max-width: 800px;
-    margin: 100px auto 0; /* Margin top accounts for fixed header */
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.search-shortcut {
+    background-color: #e0e7ff;
+    color: #333;
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    margin-left: 0.3rem;
 }
 
-/* Intro Section */
-.intro h2 {
-    color: #2a4f7c;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.intro p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    line-height: 1.8;
-}
-
-/* Video Section */
-.video-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Footer */
-.site-footer {
-    background-color: #2a4f7c;
-    color: white;
-    padding: 1.5rem;
-    text-align: center;
-    margin-top: 3rem;
-    font-size: 0.9rem;
-}
-
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .content {
-        margin: 120px 20px 0;
-    }
-
-    .site-title {
-        font-size: 1.5rem;
-    }
-
     #search-bar {
-        width: 150px;
+        width: 60px;
     }
 }
