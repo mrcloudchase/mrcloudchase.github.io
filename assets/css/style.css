@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Links */
 a {
     color: #007acc;
     text-decoration: none;
@@ -85,16 +84,6 @@ a:hover {
 }
 
 /* Video Section */
-.video-section {
-    margin-top: 2rem;
-}
-
-.video-section h2 {
-    font-size: 1.5rem;
-    color: #2a4f7c;
-    margin-bottom: 1rem;
-}
-
 .video-container {
     position: relative;
     overflow: hidden;

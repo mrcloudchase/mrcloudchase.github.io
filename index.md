@@ -1,14 +1,15 @@
 ---
-title: "Home"
 layout: default
+title: "Welcome to Cloud Engineering Learning Path"
+permalink: /
 ---
 
-# Learning Paths
+# Welcome to the Cloud Engineering Learning Path
 
-Explore the following paths to start your journey:
+Start your journey into cloud engineering with curated paths and resources. This site provides a structured learning experience to help you transition from zero tech background to a cloud engineering role.
 
-## [Cloud Path]({{ site.baseurl }}/paths/cloud)
+## Introduction Video
 
-## [DevOps Path]({{ site.baseurl }}/paths/devops)
-
-## [AI/ML Path]({{ site.baseurl }}/paths/ai-ml)
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
