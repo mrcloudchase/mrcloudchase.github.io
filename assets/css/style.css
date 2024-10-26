@@ -73,10 +73,11 @@ a:hover {
     background-color: #ffffff;
     padding: 2rem 1rem;
     border-right: 1px solid #ddd;
-    position: sticky;
+    position: fixed;
     top: 80px;
     height: calc(100vh - 80px);
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    overflow-y: auto;
 }
 
 .sidebar h2 {
@@ -108,14 +109,54 @@ a:hover {
 }
 
 /* Main Content */
-.content {
+.content-container {
     flex: 1;
+    display: flex;
+    margin-left: 270px;
+}
+
+.content {
     padding: 2rem;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-left: 20px;
     max-width: 800px;
+}
+
+/* TOC */
+.toc {
+    width: 200px;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toc h3 {
+    font-size: 1rem;
+    color: #2a4f7c;
+    margin-bottom: 0.5rem;
+}
+
+.toc ul {
+    list-style: none;
+    padding: 0;
+}
+
+.toc li {
+    margin: 0.5rem 0;
+}
+
+.toc a {
+    color: #007acc;
+    font-weight: bold;
+}
+
+.toc a:hover {
+    color: #005f99;
 }
 
 /* Footer */
@@ -154,38 +195,20 @@ a:hover {
     color: white;
 }
 
-/* Card Design for Modules */
-.module-card {
-    background: #fff;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-}
-
-.module-card:hover {
-    transform: translateY(-5px);
-}
-
-.module-card h3 {
-    color: #2a4f7c;
-}
-
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .layout {
         flex-direction: column;
     }
 
-    .sidebar {
+    .sidebar, .toc {
+        position: relative;
         width: 100%;
+        top: 0;
         height: auto;
-        border-right: none;
-        box-shadow: none;
     }
 
-    .content {
-        margin: 0;
+    .content-container {
+        margin-left: 0;
     }
 }
