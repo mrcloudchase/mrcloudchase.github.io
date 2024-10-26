@@ -6,7 +6,7 @@ permalink: /
 
 # Welcome to the Cloud Engineering Learning Path
 
-Start your journey into cloud engineering with curated paths and resources. This site provides a structured learning experience to help you transition from zero tech background to a cloud engineering role.
+From index - Start your journey into cloud engineering with curated paths and resources. This site provides a structured learning experience to help you transition from zero tech background to a cloud engineering role.
 
 ## Introduction Video
 
