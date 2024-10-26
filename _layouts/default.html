@@ -14,38 +14,51 @@
       <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
       <nav class="top-nav">
         <ul>
-          <li><a href="{{ site.baseurl }}/">Guide</a></li>
-          <li><a href="{{ site.baseurl }}/study-plan">Study Plan</a></li>
-          <li><a href="{{ site.baseurl }}/cloud-dictionary">Cloud Dictionary</a></li>
+          <li><a href="{{ site.baseurl }}/">Home</a></li>
+          <li><a href="{{ site.baseurl }}/paths/cloud">Cloud Path</a></li>
+          <li><a href="{{ site.baseurl }}/paths/devops">DevOps Path</a></li>
+          <li><a href="{{ site.baseurl }}/paths/ai-ml">AI/ML Path</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Layout with Sidebar, Main Content, and Conditional TOC -->
+  <!-- Sidebar and Main Content -->
   <div class="layout">
-    <!-- Sidebar -->
+    <!-- Sidebar Navigation for Paths -->
     <aside class="sidebar">
-      <h2>Modules</h2>
+      <h2>Paths</h2>
       <ul class="sidebar-nav">
-        <li><a href="{{ site.baseurl }}/">Welcome</a></li>
-        {% for module in site.modules %}
-        <li><a href="{{ module.url | relative_url }}">{{ module.title }}</a></li>
-        {% endfor %}
+        <li><a href="{{ site.baseurl }}/paths/cloud">Cloud Path</a></li>
+        <li><a href="{{ site.baseurl }}/paths/devops">DevOps Path</a></li>
+        <li><a href="{{ site.baseurl }}/paths/ai-ml">AI/ML Path</a></li>
       </ul>
     </aside>
 
-    <!-- Main Content and Conditional TOC -->
+    <!-- Main Content Area with Conditional Rendering -->
     <div class="content-container">
-      <!-- Main Content Area -->
       <main class="content">
         <article>
+          <h1>{{ page.title }}</h1>
           {{ content }}
+          
+          {% if page.type == "path" %}
+            <!-- Rendered only for path overview pages -->
+            <h2>Modules in this Path</h2>
+            <ul>
+              {% assign path_name = page.path_name %}
+              {% for module in site.pages %}
+                {% if module.path contains path_name and module.path != page.path %}
+                  <li><a href="{{ module.url | relative_url }}">{{ module.title }}</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          {% endif %}
         </article>
       </main>
 
-      <!-- Table of Contents (TOC) -->
-      {% if page.toc != false %}
+      <!-- Table of Contents (TOC) for Modules -->
+      {% if page.type != "path" %}
       <aside class="toc">
         <h3>Table of Contents</h3>
         <ul id="toc-list"></ul>
@@ -56,64 +69,40 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-links">
-        <h4>Socials</h4>
-        <ul>
-          <li><a href="#">Discord</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Twitter</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h4>Guide Help</h4>
-        <ul>
-          <li><a href="#">Report Issue</a></li>
-          <li><a href="#">GitHub Repo</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h4>Community</h4>
-        <ul>
-          <li><a href="#">Contributors</a></li>
-          <li><a href="#">Code of Conduct</a></li>
-        </ul>
-      </div>
-    </div>
     <p>© {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Dynamic TOC with Only H2 Elements -->
+  <!-- JavaScript for Dynamic TOC with Scroll-Spy -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const tocList = document.getElementById("toc-list");
       const headings = document.querySelectorAll(".content h2");
-  
+
       headings.forEach(heading => {
         const anchor = document.createElement("a");
         const listItem = document.createElement("li");
-  
+
         // Create a unique ID for each h2 heading
         const id = heading.textContent.toLowerCase().replace(/ /g, "-").replace(/[^\w-]+/g, "");
         heading.setAttribute("id", id);
-  
+
         // Build TOC link
         anchor.href = `#${id}`;
         anchor.textContent = heading.textContent;
-  
+
         listItem.appendChild(anchor);
         tocList.appendChild(listItem);
       });
-  
+
       // Scroll-Spy Functionality
-      const tocLinks = tocList.querySelectorAll("a");
+      const tocLinks = tocList ? tocList.querySelectorAll("a") : [];
       window.addEventListener("scroll", () => {
         let fromTop = window.scrollY + 80;
-  
+
         headings.forEach((heading, index) => {
           const link = tocLinks[index];
           const nextHeading = headings[index + 1];
-  
+
           if (
             (fromTop >= heading.offsetTop && !nextHeading) ||
             (fromTop >= heading.offsetTop && fromTop < nextHeading.offsetTop)
@@ -126,6 +115,5 @@
       });
     });
   </script>
-  
 </body>
 </html>
