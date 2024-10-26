@@ -22,7 +22,7 @@
     </div>
   </header>
 
-  <!-- Layout with Sidebar, Main Content, and TOC -->
+  <!-- Layout with Sidebar, Main Content, and Conditional TOC -->
   <div class="layout">
     <!-- Sidebar -->
     <aside class="sidebar">
@@ -35,7 +35,7 @@
       </ul>
     </aside>
 
-    <!-- Main Content and TOC -->
+    <!-- Main Content and Conditional TOC -->
     <div class="content-container">
       <!-- Main Content Area -->
       <main class="content">
@@ -45,10 +45,12 @@
       </main>
 
       <!-- Table of Contents (TOC) -->
+      {% if page.toc != false %}
       <aside class="toc">
         <h3>Table of Contents</h3>
         <ul id="toc-list"></ul>
       </aside>
+      {% endif %}
     </div>
   </div>
 

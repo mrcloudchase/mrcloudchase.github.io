@@ -1,5 +1,5 @@
 ---
-layout: module
+layout: default
 title: "Module 3: DevOps Essentials"
 ---
 

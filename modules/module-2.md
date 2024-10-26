@@ -1,5 +1,5 @@
 ---
-layout: module
+layout: default
 title: "Module 2: Cloud Basics"
 ---
 

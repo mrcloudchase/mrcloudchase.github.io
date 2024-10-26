@@ -1,5 +1,5 @@
 ---
-layout: module
+layout: default
 title: "Module 1: Getting Started"
 ---
 
