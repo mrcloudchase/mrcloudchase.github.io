@@ -112,7 +112,7 @@ a:hover {
 .content-container {
     flex: 1;
     display: flex;
-    margin-left: 270px;
+    margin-left: 270px; /* Offset for sidebar */
 }
 
 .content {
@@ -123,7 +123,7 @@ a:hover {
     max-width: 800px;
 }
 
-/* TOC */
+/* TOC (Table of Contents) */
 .toc {
     width: 200px;
     position: fixed;
