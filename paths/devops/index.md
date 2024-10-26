@@ -1,6 +1,6 @@
 ---
 title: "Cloud Path"
-layout: path
+layout: default
 ---
 
 # DevOps Path
