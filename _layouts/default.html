@@ -13,9 +13,6 @@
       <nav>
         <ul>
           <li><a href="{{ site.baseurl }}/">Home</a></li>
-          {% for module in site.modules %}
-          <li><a href="{{ module.url | relative_url }}">{{ module.title }}</a></li>
-          {% endfor %}
         </ul>
       </nav>
     </div>
