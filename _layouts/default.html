@@ -5,27 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <!-- Header with Global Top Navigation Links -->
+  <!-- Header -->
   <header class="site-header">
     <div class="header-content">
       <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
       <nav class="top-nav">
         <ul>
-          <li><a href="https://discord.com" target="_blank">Discord</a></li>
-          <li><a href="https://github.com/mrcloudchase" target="_blank">GitHub</a></li>
-          <li><a href="https://other-site.com" target="_blank">Other Site</a></li>
-          <!-- Placeholder for future search functionality -->
+          <li><a href="{{ site.baseurl }}/">Home</a></li>
+          <li><a href="{{ site.baseurl }}/paths/cloud">Cloud Path</a></li>
+          <li><a href="{{ site.baseurl }}/paths/devops">DevOps Path</a></li>
+          <li><a href="{{ site.baseurl }}/paths/ai-ml">AI/ML Path</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Sidebar and Main Content Layout -->
+  <!-- Sidebar and Main Content -->
   <div class="layout">
-    <!-- Sidebar with Path Navigation -->
+    <!-- Sidebar Navigation for Paths -->
     <aside class="sidebar">
       <h2>Paths</h2>
       <ul class="sidebar-nav">
@@ -35,11 +35,10 @@
       </ul>
     </aside>
 
-    <!-- Main Content Area -->
+    <!-- Main Content Area with Conditional Rendering -->
     <div class="content-container">
       <main class="content">
         <article>
-          <h1>{{ page.title }}</h1>
           {{ content }}
           
           {% if page.type == "path" %}
@@ -56,6 +55,14 @@
           {% endif %}
         </article>
       </main>
+
+      <!-- Table of Contents (TOC) for Modules -->
+      {% if page.type != "path" %}
+      <aside class="toc">
+        <h3>Table of Contents</h3>
+        <ul id="toc-list"></ul>
+      </aside>
+      {% endif %}
     </div>
   </div>
 
@@ -63,5 +70,49 @@
   <footer class="site-footer">
     <p>© {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript for Dynamic TOC with Scroll-Spy -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const tocList = document.getElementById("toc-list");
+      const headings = document.querySelectorAll(".content h2");
+
+      headings.forEach(heading => {
+        const anchor = document.createElement("a");
+        const listItem = document.createElement("li");
+
+        // Create a unique ID for each h2 heading
+        const id = heading.textContent.toLowerCase().replace(/ /g, "-").replace(/[^\w-]+/g, "");
+        heading.setAttribute("id", id);
+
+        // Build TOC link
+        anchor.href = `#${id}`;
+        anchor.textContent = heading.textContent;
+
+        listItem.appendChild(anchor);
+        tocList.appendChild(listItem);
+      });
+
+      // Scroll-Spy Functionality
+      const tocLinks = tocList ? tocList.querySelectorAll("a") : [];
+      window.addEventListener("scroll", () => {
+        let fromTop = window.scrollY + 80;
+
+        headings.forEach((heading, index) => {
+          const link = tocLinks[index];
+          const nextHeading = headings[index + 1];
+
+          if (
+            (fromTop >= heading.offsetTop && !nextHeading) ||
+            (fromTop >= heading.offsetTop && fromTop < nextHeading.offsetTop)
+          ) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>

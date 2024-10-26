@@ -123,6 +123,50 @@ a:hover {
     max-width: 800px;
 }
 
+/* TOC (Table of Contents) */
+.toc {
+    width: 200px;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: calc(100vh - 100px);
+}
+
+.toc h3 {
+    font-size: 1rem;
+    color: #2a4f7c;
+    margin-bottom: 0.5rem;
+}
+
+.toc ul {
+    list-style: none;
+    padding: 0;
+}
+
+.toc li {
+    margin: 0.5rem 0;
+}
+
+.toc a {
+    color: #007acc;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.toc a:hover {
+    color: #005f99;
+}
+
+.toc .active {
+    color: #2a4f7c;
+    font-weight: 700;
+}
+
 /* Footer */
 .site-footer {
     background-color: #2a4f7c;
