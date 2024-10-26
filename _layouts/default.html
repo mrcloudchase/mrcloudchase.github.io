@@ -22,7 +22,7 @@
     </div>
   </header>
 
-  <!-- Layout with Sidebar and Main Content -->
+  <!-- Layout with Sidebar, Main Content, and TOC -->
   <div class="layout">
     <!-- Sidebar -->
     <aside class="sidebar">
@@ -35,14 +35,21 @@
       </ul>
     </aside>
 
-    <!-- Main Content -->
-    <main class="content">
-      <article>
-        <div class="module-card">
+    <!-- Main Content and TOC -->
+    <div class="content-container">
+      <!-- Main Content Area -->
+      <main class="content">
+        <article>
           {{ content }}
-        </div>
-      </article>
-    </main>
+        </article>
+      </main>
+
+      <!-- Table of Contents (TOC) -->
+      <aside class="toc">
+        <h3>Table of Contents</h3>
+        <ul id="toc-list"></ul>
+      </aside>
+    </div>
   </div>
 
   <!-- Footer -->
@@ -73,5 +80,29 @@
     </div>
     <p>© {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript for Dynamic TOC -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const tocList = document.getElementById("toc-list");
+      const headings = document.querySelectorAll(".content h2, .content h3");
+
+      headings.forEach(heading => {
+        const anchor = document.createElement("a");
+        const listItem = document.createElement("li");
+
+        // Create a unique ID for each heading
+        const id = heading.textContent.toLowerCase().replace(/ /g, "-").replace(/[^\w-]+/g, "");
+        heading.setAttribute("id", id);
+        
+        // Build TOC link
+        anchor.href = `#${id}`;
+        anchor.textContent = heading.textContent;
+        
+        listItem.appendChild(anchor);
+        tocList.appendChild(listItem);
+      });
+    });
+  </script>
 </body>
 </html>
