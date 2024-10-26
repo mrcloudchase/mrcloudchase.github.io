@@ -86,25 +86,40 @@ a:hover {
     color: #2a4f7c;
 }
 
-.sidebar-nav ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.sidebar-nav li {
-    margin: 0.5rem 0;
-}
-
-.sidebar-nav a {
-    color: #333;
+/* Dropdown Toggle */
+.dropdown-toggle {
+    background: none;
+    border: none;
+    color: #2a4f7c;
     font-weight: bold;
-    display: block;
+    font-size: 1rem;
     padding: 0.5rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
 }
 
-.sidebar-nav a:hover {
+.dropdown-toggle:hover {
+    background-color: #f0f4f8;
+    color: #1a3c5a;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    list-style: none;
+    display: none; /* Hidden by default */
+    padding-left: 1rem;
+}
+
+.module-item a {
+    color: #555;
+    font-weight: normal;
+    padding: 0.5rem;
+    display: block;
+    border-radius: 5px;
+}
+
+.module-item a:hover {
     background-color: #f4f4f4;
 }
 
@@ -123,84 +138,12 @@ a:hover {
     max-width: 800px;
 }
 
-/* TOC (Table of Contents) */
-.toc {
-    width: 200px;
-    position: fixed;
-    top: 80px;
-    right: 20px;
-    background: #f9f9f9;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    max-height: calc(100vh - 100px);
-}
-
-.toc h3 {
-    font-size: 1rem;
-    color: #2a4f7c;
-    margin-bottom: 0.5rem;
-}
-
-.toc ul {
-    list-style: none;
-    padding: 0;
-}
-
-.toc li {
-    margin: 0.5rem 0;
-}
-
-.toc a {
-    color: #007acc;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.toc a:hover {
-    color: #005f99;
-}
-
-.toc .active {
-    color: #2a4f7c;
-    font-weight: 700;
-}
-
 /* Footer */
 .site-footer {
     background-color: #2a4f7c;
     color: white;
     padding: 2rem;
     text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.footer-links h4 {
-    margin-bottom: 0.5rem;
-    color: #ffdd57;
-}
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links ul li {
-    margin: 0.3rem 0;
-}
-
-.footer-links a {
-    color: #ffdd57;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: white;
 }
 
 /* Responsive Design */
