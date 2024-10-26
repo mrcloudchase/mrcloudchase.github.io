@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
+  <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
 <body>
-  <!-- Header with Global Top Navigation Links -->
+  <!-- Header -->
   <header class="site-header">
     <div class="header-content">
       <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
@@ -22,70 +22,25 @@
     </div>
   </header>
 
-  <!-- Sidebar and Main Content Layout -->
-  <div class="layout">
-    <!-- Sidebar with Expandable Path and Module Navigation -->
-    <aside class="sidebar">
-      <h2>Documentation</h2>
-      <ul class="sidebar-nav">
-        {% assign paths = site.pages | group_by: "path_name" %}
-        {% for path in paths %}
-          <li>
-            <!-- Path Link with Dropdown Toggle -->
-            <button class="dropdown-toggle" onclick="toggleDropdown('dropdown-{{ path.name }}')">
-              {{ path.name | capitalize }} Path
-            </button>
-            <ul id="dropdown-{{ path.name }}" class="dropdown-content">
-              {% for page in path.items %}
-                {% if page.path contains "modules" %}
-                  <li class="module-item"><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
-                {% endif %}
-              {% endfor %}
-            </ul>
-          </li>
-        {% endfor %}
-      </ul>
-    </aside>
+  <!-- Main Content Area -->
+  <main class="content">
+    <section class="intro">
+      <h2>Welcome to the Cloud Engineering Learning Path</h2>
+      <p>Start your journey into cloud engineering with curated paths and resources. This site provides a structured learning experience to help you transition from zero tech background to a cloud engineering role.</p>
+    </section>
 
-    <!-- Main Content Area -->
-    <div class="content-container">
-      <main class="content">
-        <article>
-          <h1>{{ page.title }}</h1>
-          {{ content }}
-          
-          {% if page.type == "path" %}
-            <!-- Rendered only for path overview pages -->
-            <h2>Modules in this Path</h2>
-            <ul>
-              {% assign path_name = page.path_name %}
-              {% for module in site.pages %}
-                {% if module.path contains path_name and module.path != page.path %}
-                  <li><a href="{{ module.url | relative_url }}">{{ module.title }}</a></li>
-                {% endif %}
-              {% endfor %}
-            </ul>
-          {% endif %}
-        </article>
-      </main>
-    </div>
-  </div>
+    <!-- Embedded YouTube Video -->
+    <section class="video-section">
+      <h2>Introduction Video</h2>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
     <p>© {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
   </footer>
-
-  <!-- JavaScript for Dropdown Toggle -->
-  <script>
-    function toggleDropdown(id) {
-      const element = document.getElementById(id);
-      if (element.style.display === "none" || element.style.display === "") {
-        element.style.display = "block";
-      } else {
-        element.style.display = "none";
-      }
-    }
-  </script>
 </body>
 </html>
