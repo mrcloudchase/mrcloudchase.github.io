@@ -1,27 +1,44 @@
 ---
+title: "Module 3: Programming with Python"
 layout: default
-title: "Module 3: DevOps Essentials"
 ---
 
-# Module 3: DevOps Essentials
+# Module 3: Programming with Python
 
-## Introduction
+## Introduction to Python
+Python is a high-level, interpreted programming language known for its readability.
 
-## Pre-requisites
+## Setting Up Python
+Learn how to install Python and set up your environment.
 
-## Step 1
+### Installing Python
+Download and install Python from the official website.
 
-## Step 2
+### Setting Up a Virtual Environment
+Use `python -m venv env` to create a virtual environment.
 
-## Step 3
+## Basic Python Syntax
+Understand the core syntax and structure of Python code.
 
-## Summary
+### Variables and Data Types
+Learn about variables and common data types in Python.
 
-## Next Steps
+- Strings, Integers, Floats, Booleans
 
-### Recommended Resources
-- [Introduction to DevOps](https://example.com/intro-devops) - A high-level overview of DevOps practices and tools.
-- [CI/CD Basics](https://example.com/cicd-basics) - Understanding Continuous Integration and Continuous Deployment.
-- [Version Control with Git](https://example.com/git-basics) - Learn Git for version control, a key skill in DevOps.
+### Control Structures
+Control the flow of your program using loops and conditionals.
 
-These resources introduce DevOps concepts and tools necessary for cloud engineering.
+- `if`, `for`, and `while` statements
+
+## Functions in Python
+Functions allow you to encapsulate code for reusability.
+
+### Defining Functions
+Use the `def` keyword to define a function.
+
+```python
+def greet(name):
+    return f"Hello, {name}!"
+
+greet("Alice")
+```
