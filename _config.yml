@@ -14,3 +14,8 @@ modules:
     url: "/modules/module-2"
   - title: "Module 3: DevOps Essentials"
     url: "/modules/module-3"
+sass:
+  style: compressed
+assets:
+  css:
+    - "/assets/css/style.css"

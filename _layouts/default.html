@@ -8,24 +8,38 @@
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-      <nav>
-        <ul>
-          <li><a href="{{ site.baseurl }}/">Home</a></li>
-        </ul>
-      </nav>
-    </div>
+    <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+    <nav>
+      <ul>
+        <li><a href="{{ site.baseurl }}/">Home</a></li>
+        {% for module in site.modules %}
+        <li><a href="{{ module.url | relative_url }}">{{ module.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
   </header>
-  <main class="container">
-    <article>
-      {{ content }} <!-- Only display content from the Markdown file -->
-    </article>
-  </main>
+
+  <div class="layout" style="display: flex;">
+    <!-- Sidebar for navigation -->
+    <aside class="sidebar">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="{{ site.baseurl }}/">Home</a></li>
+        {% for module in site.modules %}
+        <li><a href="{{ module.url | relative_url }}">{{ module.title }}</a></li>
+        {% endfor %}
+        <!-- Add additional links here as you scale -->
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      {{ content }}
+    </main>
+  </div>
+
   <footer>
-    <div class="container">
-      <p>© {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-    </div>
+    <p>© {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
   </footer>
 </body>
 </html>
