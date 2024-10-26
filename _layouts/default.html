@@ -7,38 +7,67 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <header>
-    <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-    <nav>
-      <ul>
-        <li><a href="{{ site.baseurl }}/">Home</a></li>
-        {% for module in site.modules %}
-        <li><a href="{{ module.url | relative_url }}">{{ module.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+      <nav class="top-nav">
+        <ul>
+          <li><a href="{{ site.baseurl }}/">Guide</a></li>
+          <li><a href="{{ site.baseurl }}/study-plan">Study Plan</a></li>
+          <li><a href="{{ site.baseurl }}/cloud-dictionary">Cloud Dictionary</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <div class="layout" style="display: flex;">
-    <!-- Sidebar for navigation -->
+  <!-- Layout with Sidebar and Main Content -->
+  <div class="layout">
+    <!-- Sidebar -->
     <aside class="sidebar">
-      <h2>Navigation</h2>
-      <ul>
-        <li><a href="{{ site.baseurl }}/">Home</a></li>
+      <h2>Modules</h2>
+      <ul class="sidebar-nav">
+        <li><a href="{{ site.baseurl }}/">Welcome</a></li>
         {% for module in site.modules %}
         <li><a href="{{ module.url | relative_url }}">{{ module.title }}</a></li>
         {% endfor %}
-        <!-- Add additional links here as you scale -->
       </ul>
     </aside>
 
-    <!-- Main Content Area -->
-    <main class="main-content">
-      {{ content }}
+    <!-- Main Content -->
+    <main class="content">
+      <article>
+        {{ content }}
+      </article>
     </main>
   </div>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <h4>Socials</h4>
+        <ul>
+          <li><a href="#">Discord</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Guide Help</h4>
+        <ul>
+          <li><a href="#">Report Issue</a></li>
+          <li><a href="#">GitHub Repo</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="#">Contributors</a></li>
+          <li><a href="#">Code of Conduct</a></li>
+        </ul>
+      </div>
+    </div>
     <p>© {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
   </footer>
 </body>
