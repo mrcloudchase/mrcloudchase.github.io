@@ -1,30 +1,14 @@
 ---
+title: "Home"
 layout: default
-title: "Cloud Engineering Learning Path"
 ---
 
-Welcome to the **Cloud Engineering Learning Path**! This guide provides a step-by-step reference for free resources to help you transition from zero tech background to cloud engineering roles.
+# Learning Paths
 
-# Modules
+Explore the following paths to start your journey:
 
-## Introduction
+## [Cloud Path]({{ site.baseurl }}/paths/cloud)
 
-## Pre-requisites
+## [DevOps Path]({{ site.baseurl }}/paths/devops)
 
-## Step 1
-
-## Step 2
-
-## Step 3
-
-## Summary
-
-## Next Steps
-
-## 1. [Module 1: Getting Started](/modules/module-1) - Introduction to foundational skills and tools.
-
-## 2. [Module 2: Cloud Basics](/modules/module-2) - Overview of cloud platforms like AWS, Azure, and Google Cloud.
-
-## 3. [Module 3: DevOps Essentials](/modules/module-3) - Introduction to DevOps concepts and tools.
-
-Follow these modules sequentially to build your foundational knowledge and skills.
+## [AI/ML Path]({{ site.baseurl }}/paths/ai-ml)
