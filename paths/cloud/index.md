@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Cloud Path"
+collection: paths
 ---
 
 # Cloud Path

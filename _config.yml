@@ -17,7 +17,7 @@ sass:
 collections:
   paths:
     output: true
-    permalink: /paths/:path/
+    permalink: /paths/:name/
   modules:
     output: true
-    permalink: /paths/:path/:module/
+    permalink: /paths/:path/:name/

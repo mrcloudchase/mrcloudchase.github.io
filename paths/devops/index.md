@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "DevOps Path"
+collection: paths
 ---
 
 # DevOps Path
