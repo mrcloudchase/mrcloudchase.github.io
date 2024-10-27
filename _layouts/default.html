@@ -26,6 +26,7 @@
     <ul class="nav-list">
       {% for path in site.paths %}
         <li>
+          <!-- Path name with expandable button -->
           <button onclick="toggleDropdown('{{ path.title | slugify }}')">{{ path.title }}</button>
           <ul id="{{ path.title | slugify }}" class="dropdown">
             {% assign modules = site.modules | where: "parent_path", path.title %}
