@@ -1,6 +1,7 @@
 ---
-title: "Cloud Path"
 layout: default
+title: "AI-ML Path"
+collection: paths
 ---
 
 # AI-ML Path

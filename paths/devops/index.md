@@ -1,6 +1,7 @@
 ---
-title: "Cloud Path"
 layout: default
+title: "DevOps Path"
+collection: paths
 ---
 
 # DevOps Path
