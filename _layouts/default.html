@@ -37,21 +37,22 @@
     <aside class="sidebar">
       <h2>Learning Paths</h2>
       <ul class="nav-list">
-        {% assign paths = site.pages | where: "type", "path" %}
-        {% for path in paths %}
-          <li class="{% if page.url contains path.url %}active{% endif %}">
-            <button class="dropdown-toggle" onclick="toggleDropdown('dropdown-{{ path.slug }}')">
-              <i class="fas fa-folder"></i> {{ path.title }}
-            </button>
-            <ul id="dropdown-{{ path.slug }}" class="dropdown-content" style="{% if page.url contains path.url %}display: block;{% endif %}">
-              {% assign modules = site.pages | where: "parent_path", path.title %}
-              {% for module in modules %}
-                <li class="{% if page.url == module.url %}current{% endif %}">
-                  <a href="{{ module.url | relative_url }}"><i class="fas fa-file-alt"></i> {{ module.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </li>
+        {% for path in site.pages %}
+          {% if path.layout == "path" %}
+            <li>
+              <button class="dropdown-toggle" onclick="toggleDropdown('dropdown-{{ path.slug }}')">
+                <i class="fas fa-folder"></i> {{ path.title }}
+              </button>
+              <ul id="dropdown-{{ path.slug }}" class="dropdown-content">
+                {% assign modules = site.pages | where: "parent_path", path.title %}
+                {% for module in modules %}
+                  <li>
+                    <a href="{{ module.url | relative_url }}"><i class="fas fa-file-alt"></i> {{ module.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endif %}
         {% endfor %}
       </ul>
     </aside>
@@ -86,13 +87,14 @@
 
   <!-- JavaScript for Sidebar and TOC functionality -->
   <script>
+    // Toggle dropdown function for sidebar
     function toggleDropdown(id) {
       const element = document.getElementById(id);
       element.style.display = (element.style.display === "none" || element.style.display === "") ? "block" : "none";
     }
 
+    // Generate TOC dynamically
     document.addEventListener('DOMContentLoaded', function () {
-      // Scroll-spy for Table of Contents
       const tocList = document.getElementById('toc-list');
       const headings = document.querySelectorAll('.content h2');
 
@@ -100,6 +102,20 @@
         const listItem = document.createElement('li');
         listItem.innerHTML = `<a href="#${heading.id}">${heading.textContent}</a>`;
         tocList.appendChild(listItem);
+      });
+
+      // Scroll-Spy for TOC
+      window.addEventListener('scroll', () => {
+        let fromTop = window.scrollY;
+        document.querySelectorAll('.toc-sidebar a').forEach(link => {
+          let section = document.querySelector(link.hash);
+
+          if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
       });
     });
   </script>

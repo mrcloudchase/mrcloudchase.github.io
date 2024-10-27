@@ -7,6 +7,9 @@ theme: minima
 plugins:
   - jekyll-sitemap
 
+layouts:
+  - "/layouts/default.html"
+
 modules:
   - title: "Module 1: Getting Started"
     url: "/modules/module-1"
