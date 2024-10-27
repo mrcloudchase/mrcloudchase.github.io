@@ -1,24 +1,30 @@
 title: "Cloud Engineering Learning Path"
 description: "A step-by-step resource guide to transition from zero tech background to cloud engineering."
-baseurl: ""
+baseurl: ""  # Use "/" if deploying to a subpath, or keep empty if root
 url: "https://mrcloudchase.github.io"
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-sitemap
 
-layouts:
-  - "/layouts/default.html"
+# Update to correctly point to your layouts directory
+layouts_dir: "_layouts"
 
-modules:
-  - title: "Module 1: Getting Started"
-    url: "/modules/module-1"
-  - title: "Module 2: Cloud Basics"
-    url: "/modules/module-2"
-  - title: "Module 3: DevOps Essentials"
-    url: "/modules/module-3"
+# Specify the CSS directory
 sass:
+  sass_dir: "_sass"
   style: compressed
+
+# Point to assets correctly
 assets:
   css:
     - "/assets/css/style.css"
+
+# Paths for learning modules and paths navigation
+collections:
+  paths:
+    output: true
+    permalink: /paths/:path/
+  modules:
+    output: true
+    permalink: /paths/:path/:module/
