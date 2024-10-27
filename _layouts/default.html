@@ -6,7 +6,6 @@
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
-  <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -15,18 +14,14 @@
     <div class="header-content">
       <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
       <nav class="top-nav">
-        <!-- Language Selector (Placeholder) -->
         <div class="language-selector">
           <span class="icon"><i class="fas fa-language"></i></span> English
         </div>
-        <!-- External Links -->
         <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i> Discord</a>
         <a href="https://github.com/mrcloudchase" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <!-- Dark Mode Toggle (Placeholder) -->
         <div class="dark-mode-toggle">
           <i class="fas fa-moon"></i>
         </div>
-        <!-- Search Bar -->
         <div class="search-container">
           <i class="fas fa-search"></i>
           <input type="text" id="search-bar" placeholder="Search">
@@ -38,23 +33,55 @@
     </div>
   </header>
 
-  <!-- Main Content Area -->
-  <main class="content">
-    {% if page.url == "/" %}
-      <section class="intro">
-        {{ content }}
-      </section>
-    {% else %}
-      <article>
-        <h1>{{ page.title }}</h1>
-        {{ content }}
-      </article>
-    {% endif %}
-  </main>
+  <!-- Layout with Left-Side Navigation -->
+  <div class="layout">
+    <!-- Left-Side Navigation for Paths and Modules -->
+    <aside class="sidebar">
+      <h2>Learning Paths</h2>
+      <ul class="nav-list">
+        {% assign paths = site.pages | where: "type", "path" %}
+        {% for path in paths %}
+          <li>
+            <button class="dropdown-toggle" onclick="toggleDropdown('dropdown-{{ path.slug }}')">
+              <i class="fas fa-folder"></i> {{ path.title }}
+            </button>
+            <ul id="dropdown-{{ path.slug }}" class="dropdown-content">
+              {% assign modules = site.pages | where: "parent_path", path.title %}
+              {% for module in modules %}
+                <li><a href="{{ module.url | relative_url }}"><i class="fas fa-file-alt"></i> {{ module.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content">
+      {% if page.url == "/" %}
+        <section class="intro">
+          {{ content }}
+        </section>
+      {% else %}
+        <article>
+          <h1>{{ page.title }}</h1>
+          {{ content }}
+        </article>
+      {% endif %}
+    </main>
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer">
     <p>© {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript for Dropdown Toggle -->
+  <script>
+    function toggleDropdown(id) {
+      const element = document.getElementById(id);
+      element.style.display = (element.style.display === "none" || element.style.display === "") ? "block" : "none";
+    }
+  </script>
 </body>
 </html>
