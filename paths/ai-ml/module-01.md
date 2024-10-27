@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Module 1: Introduction to AI-ML"
+parent_path: "AI-ML Path"
+collection: modules
+---
+
 # Getting Started with AI-ML Module
 
 Welcome to the "Getting Started with AI-ML" module! In this module, we will introduce you to the exciting world of Artificial Intelligence and Machine Learning. Whether you are a beginner or have some prior knowledge, this module will provide you with the foundational concepts and tools to kickstart your journey in AI-ML.

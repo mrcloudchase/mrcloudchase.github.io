@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Module 3: Programming with Python"
+parent_path: "Cloud Path"
+collection: modules
+---
+
 # Programming with Python
 
 In this module, we will dive into the fundamentals of programming with Python. Python is a versatile and powerful programming language that is widely used in various domains, including web development, data analysis, and artificial intelligence.

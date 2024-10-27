@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Module 2: Version Control and Text Editing"
+parent_path: "Cloud Path"
+collection: modules
+---
+
 # Version Control and Text Editing
 
 In this module, we will explore the fundamentals of version control and text editing. We will cover the following topics:

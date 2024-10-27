@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Module 1: Getting Started with Linux"
+parent_path: "Cloud Path"
+collection: modules
+---
+
 # Getting Started with Linux
 
 In this module, you will learn the basics of Linux and how to get started with using it as your operating system. We will cover the following topics:

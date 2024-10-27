@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Module 1: Introduction to DevOps"
+parent_path: "DevOps Path"
+collection: modules
+---
+
 # Introduction to DevOps
 
 DevOps is a software development approach that combines software development (Dev) and IT operations (Ops) to improve collaboration, efficiency, and quality throughout the software development lifecycle. It aims to bridge the gap between development and operations teams, enabling faster and more reliable software delivery.

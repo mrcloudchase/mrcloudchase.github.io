@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Module 2: Advanced Deploymrent Strategies"
+parent_path: "DevOps Path"
+collection: modules
+---
+
 # Advanced Deployment Strategies
 
 In this module, we will explore advanced deployment strategies that can enhance the efficiency and reliability of your DevOps processes. We will cover the following topics:

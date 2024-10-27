@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Module 2: Introduction to AI-ML"
+parent_path: "AI-ML Path"
+collection: modules
+---
+
 # Deep Dive into AI-ML
 
 In this module, we will explore the fascinating world of Artificial Intelligence and Machine Learning (AI-ML). We will delve into the core concepts, algorithms, and techniques that power AI-ML applications. By the end of this module, you will have a solid understanding of how AI-ML works and how it can be applied to solve real-world problems.
