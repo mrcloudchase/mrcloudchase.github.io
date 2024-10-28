@@ -5,5 +5,5 @@ baseurl: ""
 url: "https://your-site.github.io"
 theme: minima
 plugins:
-  - jekyll-sitemap
-  - jekyll-feed
+  - jekyll-sitemap  # Automatically generates a sitemap for SEO purposes
+  - jekyll-feed  # Adds RSS feed functionality for the blog

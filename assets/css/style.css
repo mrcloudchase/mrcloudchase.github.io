@@ -7,6 +7,14 @@ body {
   padding: 0;
 }
 
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', Arial, sans-serif; /* Use Lato across entire site */
+}
+
+.header-links a, .content, .footer-nav a, .left-sidebar, .right-sidebar {
+  font-family: 'Roboto', Arial, sans-serif; /* Use Roboto for navigation, content, and other texts */
+}
+
 header {
   background: linear-gradient(135deg, #2a3d66, #1d4e89); /* Add gradient for modern look */
   color: #ffffff;
