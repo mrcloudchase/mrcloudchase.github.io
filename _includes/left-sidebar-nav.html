@@ -2,12 +2,14 @@
   <nav>
     <ul>
       {% for item in site.data.navigation %}
-      <li>
-        <a href="{{ item.url }}">{{ item.title }}</a>
+      <li class="nav-item">
+        <a href="{{ item.url }}" class="dropdown-toggle">
+          <i class="fas fa-chevron-right"></i> {{ item.title }}
+        </a>
         {% if item.modules %}
-        <ul>
+        <ul class="module-list">
           {% for module in item.modules %}
-          <li><a href="{{ module.url }}">{{ module.title }}</a></li>
+          <li class="module-item{% if page.url == module.url %} active{% endif %}"><a href="{{ module.url }}">{{ module.title }}</a></li>
           {% endfor %}
         </ul>
         {% endif %}
@@ -16,3 +18,51 @@
     </ul>
   </nav>
 </aside>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Functionality for dropdowns to stay expanded
+    const currentUrl = window.location.pathname;
+
+    document.querySelectorAll('.nav-item > a').forEach(link => {
+      if (currentUrl.includes(link.getAttribute('href')) && currentUrl !== link.getAttribute('href')) {
+        link.closest('.nav-item').classList.add('active');
+        const dropdownIcon = link.querySelector('i');
+        if (dropdownIcon) {
+          dropdownIcon.classList.replace('fa-chevron-right', 'fa-chevron-down');
+        }
+      }
+
+      // Add click event for dropdown functionality
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const moduleList = this.nextElementSibling;
+        if (moduleList) {
+          moduleList.classList.toggle('active');
+          const dropdownIcon = this.querySelector('i');
+          if (dropdownIcon) {
+            dropdownIcon.classList.toggle('fa-chevron-right');
+            dropdownIcon.classList.toggle('fa-chevron-down');
+          }
+        }
+      });
+    });
+
+    document.querySelectorAll('.module-item > a').forEach(link => {
+      if (currentUrl === link.getAttribute('href')) {
+        link.closest('.module-item').classList.add('active');
+        link.closest('.module-list').classList.add('active');
+        link.closest('.module-list').previousElementSibling.querySelector('i').classList.replace('fa-chevron-right', 'fa-chevron-down');
+      } else {
+        link.closest('.module-item').classList.remove('active');
+      }
+    });
+
+    // Add underlay effect for selected page
+    const activePage = document.querySelector('.module-item.active > a');
+    if (activePage) {
+      activePage.style.backgroundColor = '#9bb1d4'; /* Updated to match site's modern aesthetic */
+      activePage.style.borderRadius = '5px';
+      activePage.style.padding = '5px';
+    }
+  });
+</script>

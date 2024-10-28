@@ -2,7 +2,7 @@ title: "Self-Learning Paths"
 description: "Free resources and learning paths for cloud, AI/ML, and DevOps."
 author: Cloud Chase
 baseurl: ""
-url: "https://mrcloudchase.github.io"
+url: "https://your-site.github.io"
 theme: minima
 plugins:
   - jekyll-sitemap

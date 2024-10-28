@@ -1,6 +1,8 @@
 - title: "Cloud Learning Path"
   url: "/paths/cloud/"
   modules:
+    - title: "About"
+      url: "/paths/cloud/"
     - title: "Module 1: Cloud Basics"
       url: "/paths/cloud/module-01/"
     - title: "Module 2: Cloud Services"
@@ -10,6 +12,8 @@
 - title: "AI/ML Learning Path"
   url: "/paths/ai-ml/"
   modules:
+    - title: "About"
+      url: "/paths/ai-ml/"
     - title: "Module 1: Introduction to AI/ML"
       url: "/paths/ai-ml/module-01/"
     - title: "Module 2: Machine Learning Tools"
@@ -17,6 +21,8 @@
 - title: "DevOps Learning Path"
   url: "/paths/devops/"
   modules:
+    - title: "About"
+      url: "/paths/devops/"
     - title: "Module 1: DevOps Basics"
       url: "/paths/devops/module-01/"
     - title: "Module 2: CI/CD Tools"

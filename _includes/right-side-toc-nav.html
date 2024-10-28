@@ -9,11 +9,11 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const toc = document.getElementById("toc");
-    const headers = document.querySelectorAll("main.content h2, main.content h3");
+    const headers = document.querySelectorAll("main.content h2");
 
     headers.forEach((header) => {
       const listItem = document.createElement("li");
-      listItem.classList.add(header.tagName.toLowerCase() === 'h2' ? 'toc-h2' : 'toc-h3');
+      listItem.classList.add('toc-h2');
       const link = document.createElement("a");
       link.textContent = header.textContent;
       link.href = "#" + header.id;
