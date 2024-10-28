@@ -107,7 +107,7 @@ header {
 
 /* Add box underlay effect for selected page */
 .left-sidebar .module-item.active > a {
-  background-color: #9bb1d4; /* Updated to match modern color aesthetic */
+  background-color: #7b9bcd; /* Updated to match modern color aesthetic */
   border-radius: 5px;
   padding: 5px;
 }
