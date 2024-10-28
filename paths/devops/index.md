@@ -1,16 +1,8 @@
 ---
 layout: default
-title: "DevOps Path"
-collection: paths
+title: "DevOps Learning Path"
 ---
 
-# DevOps Path
+# DevOps Learning Path
 
-This path covers foundational topics in AI and Machine Learning.
-
-## Modules
-
-1. [Module 1: Introduction to AI-ML](/paths/devops/module-01)
-2. [Module 2: Data Science Basics](/paths/devops/module-02)
-3. [Module 3: Machine Learning](/paths/devops/module-03)
-4. [Module 4: Deep Learning](/paths/devops/module-04)
+The DevOps Learning Path introduces you to the world of DevOps, focusing on key practices, CI/CD tools, infrastructure as code, and how to set up and optimize a DevOps workflow.

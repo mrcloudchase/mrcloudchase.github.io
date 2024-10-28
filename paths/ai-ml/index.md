@@ -1,14 +1,8 @@
 ---
 layout: default
-title: "AI-ML Path"
-collection: paths
+title: "AI/ML Learning Path"
 ---
 
-# AI-ML Path
+# AI/ML Learning Path
 
-This path covers foundational topics in AI and Machine Learning.
-
-## Modules
-
-1. [Module 1: Introduction to AI-ML](/paths/ai-ml/module-01)
-2. [Module 2: Data Science Basics](/paths/ai-ml/module-02)
+The AI/ML Learning Path provides a comprehensive guide for self-learning AI and machine learning, including key concepts, tools, and practical resources to help you get started.

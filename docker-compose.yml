@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  jekyll:
+    platform: linux/amd64  # Ensures compatibility for Mac M1; others may not need this line
+    image: jekyll/jekyll:latest
+    volumes:
+      - .:/app  # Maps the local directory to /app inside the container, enabling real-time updates
+      - bundle_cache:/usr/local/bundle  # Cache gems to avoid reinstalling every time
+    ports:
+      - "4000:4000"  # Exposes port 4000 for access to the Jekyll server
+    command: sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0"
+    working_dir: /app  # Set the working directory inside the container
+    environment:
+      - JEKYLL_ENV=development  # Sets the environment for Jekyll
+
+volumes:
+  bundle_cache:  # Named volume for gem caching

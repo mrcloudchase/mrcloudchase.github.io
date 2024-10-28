@@ -3,64 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title | default: site.title }}</title>
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-    <nav class="top-nav">
-      <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i> Discord</a>
-      <a href="https://github.com/mrcloudchase" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <div class="search-container">
-        <input type="text" id="search-bar" placeholder="Search">
-      </div>
-    </nav>
+  <header>
+    {% include header.html %}
   </header>
-
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h2>Learning Paths</h2>
-    <ul class="nav-list">
-      {% for path in site.paths %}
-        <li>
-          <!-- Path name with expandable button -->
-          <button onclick="toggleDropdown('{{ path.title | slugify }}')">{{ path.title }}</button>
-          <ul id="{{ path.title | slugify }}" class="dropdown">
-            {% assign modules = site.modules | where: "parent_path", path.title %}
-            {% for module in modules %}
-              <li><a href="{{ module.url | relative_url }}">{{ module.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </li>
-      {% endfor %}
-    </ul>
-  </aside>
-
-  <!-- Main Content Area -->
-  <main class="content">
-    {% if page.url == "/" %}
-      <section class="intro">{{ content }}</section>
-    {% else %}
-      <article>
-        <h1>{{ page.title }}</h1>
-        {{ content }}
-      </article>
-    {% endif %}
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>© {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+  <div class="container">
+    {% include left-sidebar-nav.html %}
+    <main class="content">
+      {{ content }}
+    </main>
+    {% include right-side-toc-nav.html %}
+  </div>
+  <footer>
+    {% include footer.html %}
   </footer>
-
-  <script>
-    function toggleDropdown(id) {
-      var element = document.getElementById(id);
-      element.style.display = (element.style.display === "block") ? "none" : "block";
-    }
-  </script>
 </body>
 </html>

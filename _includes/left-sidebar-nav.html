@@ -1,0 +1,18 @@
+<aside class="left-sidebar">
+  <nav>
+    <ul>
+      {% for item in site.data.navigation %}
+      <li>
+        <a href="{{ item.url }}">{{ item.title }}</a>
+        {% if item.modules %}
+        <ul>
+          {% for module in item.modules %}
+          <li><a href="{{ module.url }}">{{ module.title }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</aside>

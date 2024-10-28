@@ -1,15 +1,8 @@
 ---
 layout: default
-title: "Cloud Path"
-collection: paths
+title: "Cloud Learning Path"
 ---
 
-# Cloud Path
+# Cloud Learning Path
 
-This path covers foundational topics in AI and Machine Learning.
-
-## Modules
-
-1. [Module 1: Introduction to AI-ML](/paths/cloud/module-01)
-2. [Module 2: Data Science Basics](/paths/cloud/module-02)
-3. [Module 3: Machine Learning](/paths/cloud/module-03)
+The Cloud Learning Path will guide you through the essential concepts of cloud computing, covering different cloud service providers, core services, and practical tools to help you learn.
