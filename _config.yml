@@ -1,9 +1,12 @@
+# General site settings
 title: "Self-Learning Paths"
 description: "Free resources and learning paths for cloud, AI/ML, and DevOps."
 author: Cloud Chase
 baseurl: ""
-url: "https://your-site.github.io"
+url: "https://mrcloudchase.github.io"
+
+# Theme and plugins
 theme: minima
 plugins:
-  - jekyll-sitemap  # Automatically generates a sitemap for SEO purposes
-  - jekyll-feed  # Adds RSS feed functionality for the blog
+  - jekyll-sitemap  # Auto-generate sitemaps for better SEO
+  - jekyll-feed  # Generate RSS feed for the site
