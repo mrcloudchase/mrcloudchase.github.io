@@ -19,24 +19,34 @@ const experience = [
     company: 'HiddenLayer',
     period: 'Oct 2025 – Present',
     highlights: [
-      'Collaborate with organizations to design secure AI applications and agents, ensuring robust architecture',
-      'Develop seamless integrations into AI applications, enhancing secure user experiences and functionality',
-      'Engineer hardened generative AI workloads to optimize performance and security in production',
+      'Collaborated with organizations to design secure AI applications and agents, ensuring robust architecture',
+      'Developed seamless integrations into AI applications, enhancing secure user experiences and functionality',
+      'Engineered hardened generative AI workloads to optimize performance and security in production',
     ],
   },
   {
-    title: 'Founder',
+    title: 'Chief Research Scientist',
     company: 'Average Joes Lab',
     period: 'Jul 2025 – Present',
     highlights: [
       'Founded Average Joes Lab to create a community-driven platform for accessible scientific research',
       'Developed a Research Engineering Learning Path, empowering newcomers to become independent scientists',
       'Built an open-source platform facilitating collaborative projects in AI, ML, and various scientific fields',
-      'Advocated for open science practices, promoting transparency and community peer review',
+      'Advocated for open science practices, promoting transparency and community peer review to enhance research quality',
     ],
   },
   {
-    title: 'Co-Founder',
+    title: 'Chief Enterprise Architect',
+    company: 'Odovey Consulting',
+    period: 'Jun 2025 – Present',
+    highlights: [
+      'Spearheaded the AI adoption strategy for Odovey Consulting, ensuring alignment with organizational goals',
+      'Drove the implementation of AI and Cloud strategies, enhancing operational efficiency and innovation',
+      'Conducted AI workload development to optimize performance and scalability across projects',
+    ],
+  },
+  {
+    title: 'Chief Executive Officer',
     company: 'Chasing Cloud Careers',
     period: 'Aug 2023 – Present',
     highlights: [
@@ -53,7 +63,7 @@ const experience = [
     highlights: [
       'Spearheaded technical enablement for Azure Container Registry (ACR) on Microsoft Docs, integrating AI-driven workflows with cloud architecture expertise',
       'Designed and published scenario-driven content, reaching over 500K developers monthly',
-      'Developed an AI-powered authoring pipeline, reducing content creation time from 3 days to under 5 minutes',
+      'Developed an AI-powered authoring pipeline, reducing time-to-first-draft from 3 days to under 5 minutes',
     ],
   },
   {
@@ -72,8 +82,8 @@ const experience = [
     period: 'Jul 2020 – Jun 2021',
     highlights: [
       'Designed and developed hands-on labs and foundational courses for Microsoft Azure training',
-      'Authored key certification prep materials, including Azure Administrator (AZ-104) courses',
-      'Implemented interactive content improvements, significantly increasing learner retention and engagement',
+      'Authored key certification prep materials, including Azure Administrator (AZ-104) and Intro to Azure for AWS Admins courses',
+      'Implemented interactive content improvements, significantly increasing learner retention and engagement metrics',
     ],
   },
   {
@@ -93,7 +103,7 @@ const experience = [
     period: 'May 2023 – Jul 2024',
     highlights: [
       'Promoted to Principal Cloud Architect, focusing on AI/LLM-driven architectures and enterprise AI adoption',
-      'Designed and implemented cloud-native PoCs using Hugging Face NLP models for various business applications',
+      'Designed and implemented cloud-native Proofs of Concept (PoCs) using Hugging Face NLP models for various business applications',
       'Conducted hands-on workshops and advised executives on scaling AI workloads across secure, multi-cloud platforms',
       'Delivered 13 enterprise projects, averaging $94K per engagement, enhancing modernization and AI-enabled architecture',
     ],
@@ -172,7 +182,7 @@ export default function ResumePage() {
           </h2>
           <div className="terminal-card">
             <p className="text-gray-300 leading-relaxed">
-              AI architect and cloud engineer with a track record spanning secure AI application design, enterprise cloud architecture, and technical education at scale. Currently building hardened generative AI workloads at HiddenLayer. Previously designed content reaching 500K+ developers monthly at Microsoft, authored courses with 20.8M+ minutes viewed at A Cloud Guru, and delivered 13 enterprise AI/cloud projects at CBTS. Passionate about open science, accessible education, and community-driven learning.
+              AI architect and cloud engineer with a track record spanning secure AI application design, enterprise cloud architecture, and technical education at scale. Currently building hardened generative AI workloads at HiddenLayer, leading AI strategy at Odovey Consulting, and driving open science at Average Joes Lab. Previously designed content reaching 500K+ developers monthly at Microsoft, authored courses with 20.8M+ minutes viewed at A Cloud Guru, and delivered 13 enterprise AI/cloud projects at CBTS. Passionate about open science, accessible education, and community-driven learning.
             </p>
           </div>
         </div>
