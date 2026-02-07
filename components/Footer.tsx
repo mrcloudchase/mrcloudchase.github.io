@@ -30,7 +30,7 @@ export function Footer() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/yourlinkedin"
+                href="https://www.linkedin.com/in/chasedovey"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-neon-500 transition-colors"

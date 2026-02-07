@@ -27,7 +27,7 @@ export default function Home() {
           jobTitle: 'Cloud Architect & AI Engineer',
           sameAs: [
             'https://github.com/mrcloudchase',
-            'https://www.linkedin.com/in/yourlinkedin',
+            'https://www.linkedin.com/in/chasedovey',
           ],
         }}
       />
