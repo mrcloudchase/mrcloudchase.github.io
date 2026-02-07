@@ -80,23 +80,12 @@ const experience = [
   {
     title: 'Principal Cloud Architect',
     company: 'CBTS',
-    period: 'May 2023 – Jul 2024',
+    period: 'Sep 2021 – Jul 2024',
     highlights: [
-      'Promoted to Principal Cloud Architect, focusing on AI/LLM-driven architectures and enterprise AI adoption',
-      'Designed and implemented cloud-native Proofs of Concept (PoCs) using Hugging Face NLP models for various business applications',
-      'Conducted hands-on workshops and advised executives on scaling AI workloads across secure, multi-cloud platforms',
-      'Delivered 13 enterprise projects, averaging $94K per engagement, enhancing modernization and AI-enabled architecture',
-    ],
-  },
-  {
-    title: 'Senior Cloud Architect',
-    company: 'CBTS',
-    period: 'Sep 2021 – May 2023',
-    highlights: [
-      'Designed and implemented secure, scalable cloud solutions on Azure and AWS for migrations and modernization',
-      'Delivered enterprise-ready architectures focusing on IaC automation, reliability engineering, and performance optimization',
+      'Designed and implemented secure, scalable cloud solutions on Azure and AWS for migrations, modernization, and AI-enabled architecture',
+      'Delivered 13 enterprise projects, averaging $94K per engagement, focusing on AI/LLM-driven architectures and enterprise AI adoption',
+      'Designed cloud-native PoCs using Hugging Face NLP models and advised executives on scaling AI workloads across multi-cloud platforms',
       'Engineered reusable IaC patterns, reducing deployment errors by 40% and provisioning effort significantly',
-      'Mentored engineers and created a knowledge base, enhancing global support coverage and response times',
     ],
   },
   {
