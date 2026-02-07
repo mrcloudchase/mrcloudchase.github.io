@@ -39,7 +39,7 @@ export function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:chase@dovey.dev"
+                href="mailto:chase@cdovey.dev"
                 className="text-gray-400 hover:text-neon-500 transition-colors"
                 aria-label="Email"
               >
@@ -86,8 +86,8 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-gray-400">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:chase@dovey.dev" className="hover:text-neon-400 transition-colors">
-                  chase@dovey.dev
+                <a href="mailto:chase@cdovey.dev" className="hover:text-neon-400 transition-colors">
+                  chase@cdovey.dev
                 </a>
               </div>
               <div className="flex items-center space-x-2 text-gray-400">

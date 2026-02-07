@@ -72,11 +72,11 @@ export default async function BlogPostPage({
           publisher: {
             '@type': 'Person',
             name: 'Chase Dovey',
-            url: 'https://mrcloudchase.github.io',
+            url: 'https://cdovey.dev',
           },
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': `https://mrcloudchase.github.io/blog/${slug}/`,
+            '@id': `https://cdovey.dev/blog/${slug}/`,
           },
           keywords: post.tags.join(', '),
         }}

@@ -1,19 +1,19 @@
-# Chase Dovey — mrcloudchase.github.io
+# Chase Dovey — cdovey.dev
 
 ## Who
 Chase Dovey is a cloud architect and AI engineer. He designs scalable infrastructure, builds intelligent systems, and writes about cloud, AI, and modern development.
 
 ## Website
-- URL: https://mrcloudchase.github.io
+- URL: https://cdovey.dev
 - Type: Personal website and blog
 - Tech: Next.js 16, TypeScript, Tailwind CSS, GitHub Pages
 
 ## Pages
-- Home: https://mrcloudchase.github.io/
-- About: https://mrcloudchase.github.io/about/
-- Blog: https://mrcloudchase.github.io/blog/
-- Projects: https://mrcloudchase.github.io/projects/
-- Resume: https://mrcloudchase.github.io/resume/
+- Home: https://cdovey.dev/
+- About: https://cdovey.dev/about/
+- Blog: https://cdovey.dev/blog/
+- Projects: https://cdovey.dev/projects/
+- Resume: https://cdovey.dev/resume/
 
 ## Topics
 - Cloud Architecture (Azure, AWS, multi-cloud)
@@ -24,4 +24,4 @@ Chase Dovey is a cloud architect and AI engineer. He designs scalable infrastruc
 
 ## Contact
 - GitHub: https://github.com/mrcloudchase
-- Email: chase@dovey.dev
+- Email: chase@cdovey.dev

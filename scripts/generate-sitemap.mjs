@@ -1,7 +1,7 @@
 import { readdirSync, writeFileSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
 
-const SITE_URL = 'https://mrcloudchase.github.io'
+const SITE_URL = 'https://cdovey.dev'
 
 const staticPages = [
   { path: '/', priority: '1.0' },

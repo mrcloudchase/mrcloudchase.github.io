@@ -23,4 +23,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://mrcloudchase.github.io/sitemap.xml
+Sitemap: https://cdovey.dev/sitemap.xml

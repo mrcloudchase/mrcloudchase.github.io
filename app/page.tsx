@@ -23,7 +23,7 @@ export default function Home() {
           '@context': 'https://schema.org',
           '@type': 'Person',
           name: 'Chase Dovey',
-          url: 'https://mrcloudchase.github.io',
+          url: 'https://cdovey.dev',
           jobTitle: 'Cloud Architect & AI Engineer',
           sameAs: [
             'https://github.com/mrcloudchase',
@@ -36,7 +36,7 @@ export default function Home() {
           '@context': 'https://schema.org',
           '@type': 'WebSite',
           name: 'Chase Dovey',
-          url: 'https://mrcloudchase.github.io',
+          url: 'https://cdovey.dev',
         }}
       />
 

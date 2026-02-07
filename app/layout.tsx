@@ -4,7 +4,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mrcloudchase.github.io'),
+  metadataBase: new URL('https://cdovey.dev'),
   title: {
     template: '%s | Chase Dovey',
     default: 'Chase Dovey - Cloud Architect & AI Engineer',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Chase Dovey - Cloud Architect & AI Engineer',
     description: 'Cloud architect, AI engineer, and builder of things that scale.',
-    url: 'https://mrcloudchase.github.io',
+    url: 'https://cdovey.dev',
     siteName: 'Chase Dovey',
     locale: 'en_US',
     type: 'website',

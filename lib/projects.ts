@@ -27,7 +27,7 @@ const projects: Project[] = [
     description: 'Personal website and blog built with Next.js 16, static export, and a terminal/hacker aesthetic. The site you are looking at right now.',
     techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'GitHub Pages'],
     githubUrl: 'https://github.com/mrcloudchase/mrcloudchase.github.io',
-    demoUrl: 'https://mrcloudchase.github.io',
+    demoUrl: 'https://cdovey.dev',
     featured: true,
   },
   {
