@@ -6,6 +6,8 @@
     "fetch-content": "bash scripts/fetch-content.sh",
     "predev": "npm run fetch-content",
     "dev": "next dev",
+    "generate-resume": "node scripts/generate-resume-pdf.mjs",
+    "prebuild": "npm run generate-resume",
     "build": "next build && node scripts/generate-sitemap.mjs",
     "lint": "eslint .",
     "type-check": "tsc --noEmit"

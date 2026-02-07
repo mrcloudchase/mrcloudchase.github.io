@@ -1,0 +1,147 @@
+{
+  "name": "Chase Dovey",
+  "title": "AI Architect & Cloud Engineer",
+  "email": "chase@cdovey.dev",
+  "website": "https://cdovey.dev",
+  "linkedin": "https://www.linkedin.com/in/chasedovey",
+  "github": "https://github.com/mrcloudchase",
+  "location": "Houston, TX",
+  "summary": "AI architect and cloud engineer with a track record spanning secure AI application design, enterprise cloud architecture, and technical education at scale. Currently building hardened generative AI workloads at HiddenLayer, leading AI strategy at Odovey Consulting, and driving open science at Average Joes Lab. Previously designed content reaching 500K+ developers monthly at Microsoft, authored courses with 20.8M+ minutes viewed at A Cloud Guru, and delivered 13 enterprise AI/cloud projects at CBTS. Passionate about open science, accessible education, and community-driven learning.",
+  "experience": [
+    {
+      "title": "AI Architect",
+      "company": "HiddenLayer",
+      "period": "Oct 2025 – Present",
+      "highlights": [
+        "Collaborated with organizations to design secure AI applications and agents, ensuring robust architecture",
+        "Developed seamless integrations into AI applications, enhancing secure user experiences and functionality",
+        "Engineered hardened generative AI workloads to optimize performance and security in production"
+      ]
+    },
+    {
+      "title": "Chief Research Scientist",
+      "company": "Average Joes Lab",
+      "period": "Jul 2025 – Present",
+      "highlights": [
+        "Founded Average Joes Lab to create a community-driven platform for accessible scientific research",
+        "Developed a Research Engineering Learning Path, empowering newcomers to become independent scientists",
+        "Built an open-source platform facilitating collaborative projects in AI, ML, and various scientific fields",
+        "Advocated for open science practices, promoting transparency and community peer review to enhance research quality"
+      ]
+    },
+    {
+      "title": "Chief Enterprise Architect",
+      "company": "Odovey Consulting",
+      "period": "Jun 2025 – Present",
+      "highlights": [
+        "Spearheaded the AI adoption strategy for Odovey Consulting, ensuring alignment with organizational goals",
+        "Drove the implementation of AI and Cloud strategies, enhancing operational efficiency and innovation",
+        "Conducted AI workload development to optimize performance and scalability across projects"
+      ]
+    },
+    {
+      "title": "Chief Executive Officer",
+      "company": "Chasing Cloud Careers",
+      "period": "Aug 2023 – Present",
+      "highlights": [
+        "Co-founded Chasing Cloud Careers, focusing on accessible engineering education",
+        "Curated free learning resources into structured paths for various engineering roles",
+        "Mentored professionals in career transitions, fostering a supportive learning community",
+        "Developed self-directed learning approaches that empower individuals to explore technology careers"
+      ]
+    },
+    {
+      "title": "Senior Content Developer",
+      "company": "Microsoft",
+      "period": "Aug 2024 – Oct 2025",
+      "highlights": [
+        "Spearheaded technical enablement for Azure Container Registry (ACR) on Microsoft Docs, integrating AI-driven workflows with cloud architecture expertise",
+        "Designed and published scenario-driven content, reaching over 500K developers monthly",
+        "Developed an AI-powered authoring pipeline, reducing time-to-first-draft from 3 days to under 5 minutes"
+      ]
+    },
+    {
+      "title": "Training Architect - Azure",
+      "company": "A Cloud Guru | Pluralsight",
+      "period": "Dec 2019 – Aug 2024",
+      "highlights": [
+        "Authored 9 Azure certification courses, achieving over 20.8M minutes viewed and a 4.1/5 learner rating",
+        "Developed 50+ auto-provisioned labs, enabling 175K+ completions while reducing setup time by 90%",
+        "Audited over 150 hours of content, resolving ~1,300 tickets and improving course ratings from 4.3 to 4.6",
+        "Authored and refreshed 400+ exam assets, boosting learner pass rates by 10% for key certifications"
+      ]
+    },
+    {
+      "title": "Principal Cloud Architect",
+      "company": "CBTS",
+      "period": "Sep 2021 – Jul 2024",
+      "highlights": [
+        "Designed and implemented secure, scalable cloud solutions on Azure and AWS for migrations, modernization, and AI-enabled architecture",
+        "Delivered 13 enterprise projects, averaging $94K per engagement, focusing on AI/LLM-driven architectures and enterprise AI adoption",
+        "Designed cloud-native PoCs using Hugging Face NLP models and advised executives on scaling AI workloads across multi-cloud platforms",
+        "Engineered reusable IaC patterns, reducing deployment errors by 40% and provisioning effort significantly"
+      ]
+    },
+    {
+      "title": "Jr. Systems Administrator",
+      "company": "Endurance International Group",
+      "period": "Sep 2018 – Jun 2019",
+      "highlights": [
+        "Supported shared, VPS, and dedicated hosting environments for over 600 SMB customers in a 24/7 operations team",
+        "Resolved ~105 support tickets monthly with a 96% customer satisfaction rate",
+        "Automated repetitive tasks using Bash, reducing average ticket handle time by 18%",
+        "Executed zero-downtime migrations for 80+ WordPress sites, ensuring SLA compliance"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "category": "Microsoft Azure",
+      "items": [
+        "Azure Solutions Architect Expert",
+        "Azure Administrator Associate",
+        "Azure Security Engineer Associate",
+        "Azure Network Engineer Associate",
+        "Azure AI Fundamentals",
+        "Azure Fundamentals",
+        "Microsoft Certified Trainer"
+      ]
+    },
+    {
+      "category": "AWS",
+      "items": [
+        "AWS Solutions Architect Associate",
+        "AWS Cloud Practitioner"
+      ]
+    },
+    {
+      "category": "Security",
+      "items": [
+        "CompTIA Security+",
+        "CompTIA CySA+",
+        "CompTIA Security Analytics Professional (CSAP)"
+      ]
+    },
+    {
+      "category": "Other",
+      "items": [
+        "PCEP – Certified Entry-Level Python Programmer",
+        "Linux Essentials (LPI)",
+        "Intro to Gen AI Mini Course — AI by Hand (1st Cohort)"
+      ]
+    }
+  ],
+  "volunteer": {
+    "title": "Robotics Mentor",
+    "organization": "The Awty International School",
+    "period": "Aug 2025 – Present",
+    "description": "Mentoring students on programming and electrical engineering for FIRST Robotics Competition for FIRST Championship."
+  },
+  "skillGroups": [
+    { "label": "Cloud", "items": "Azure, AWS, Kubernetes, Docker, Cloud Architecture, Multi-Cloud" },
+    { "label": "AI/ML", "items": "LLMs, RAG, AI Agents, Prompt Engineering, Data Science, Hugging Face" },
+    { "label": "DevOps", "items": "Terraform, GitHub Actions, CI/CD, Linux, Bash, Monitoring" },
+    { "label": "Dev", "items": "Python, TypeScript, Next.js, React, Node.js, Go" },
+    { "label": "Research", "items": "Research Methodologies, Technical Writing, Open Science, Community Building" }
+  ]
+}
