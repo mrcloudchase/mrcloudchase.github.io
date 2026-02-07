@@ -61,17 +61,6 @@
       ]
     },
     {
-      "title": "Training Architect - Azure",
-      "company": "A Cloud Guru | Pluralsight",
-      "period": "Jun 2019 – Aug 2024",
-      "highlights": [
-        "Authored 9 Azure certification courses, achieving over 20.8M minutes viewed and a 4.1/5 learner rating",
-        "Developed 50+ auto-provisioned labs, enabling 175K+ completions while reducing setup time by 90%",
-        "Audited over 150 hours of content, resolving ~1,300 tickets and improving course ratings from 4.3 to 4.6",
-        "Authored and refreshed 400+ exam assets, boosting learner pass rates by 10% for key certifications"
-      ]
-    },
-    {
       "title": "Principal Cloud Architect",
       "company": "CBTS",
       "period": "Sep 2021 – Jul 2024",
@@ -80,6 +69,17 @@
         "Delivered 13 enterprise projects, averaging $94K per engagement, focusing on AI/LLM-driven architectures and enterprise AI adoption",
         "Designed cloud-native PoCs using Hugging Face NLP models and advised executives on scaling AI workloads across multi-cloud platforms",
         "Engineered reusable IaC patterns, reducing deployment errors by 40% and provisioning effort significantly"
+      ]
+    },
+    {
+      "title": "Training Architect - Azure",
+      "company": "Linux Academy | A Cloud Guru | Pluralsight",
+      "period": "Jun 2019 – Aug 2024",
+      "highlights": [
+        "Authored 9 Azure certification courses, achieving over 20.8M minutes viewed and a 4.1/5 learner rating",
+        "Developed 50+ auto-provisioned labs, enabling 175K+ completions while reducing setup time by 90%",
+        "Audited over 150 hours of content, resolving ~1,300 tickets and improving course ratings from 4.3 to 4.6",
+        "Authored and refreshed 400+ exam assets, boosting learner pass rates by 10% for key certifications"
       ]
     },
     {
