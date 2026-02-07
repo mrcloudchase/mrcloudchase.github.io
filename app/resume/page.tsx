@@ -101,11 +101,41 @@ const experience = [
   },
 ]
 
-const education = [
+const certifications = [
   {
-    degree: 'Cloud & AI Certifications',
-    institution: 'Microsoft, AWS',
-    details: 'Azure Solutions Architect Expert, Azure Administrator, AWS Solutions Architect',
+    category: 'Microsoft Azure',
+    items: [
+      'Azure Solutions Architect Expert',
+      'Azure Administrator Associate',
+      'Azure Security Engineer Associate',
+      'Azure Network Engineer Associate',
+      'Azure AI Fundamentals',
+      'Azure Fundamentals',
+      'Microsoft Certified Trainer',
+    ],
+  },
+  {
+    category: 'AWS',
+    items: [
+      'AWS Solutions Architect Associate',
+      'AWS Cloud Practitioner',
+    ],
+  },
+  {
+    category: 'Security',
+    items: [
+      'CompTIA Security+',
+      'CompTIA CySA+',
+      'CompTIA Security Analytics Professional (CSAP)',
+    ],
+  },
+  {
+    category: 'Other',
+    items: [
+      'PCEP – Certified Entry-Level Python Programmer',
+      'Linux Essentials (LPI)',
+      'Intro to Gen AI Mini Course — AI by Hand (1st Cohort)',
+    ],
   },
 ]
 
@@ -188,21 +218,27 @@ export default function ResumePage() {
         </div>
       </section>
 
-      {/* Education */}
+      {/* Certifications */}
       <section className="section-padding">
         <div className="container-max max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-200 font-mono mb-6">
-            <span className="text-surface-500">{'// '}</span>{'education'}
+            <span className="text-surface-500">{'// '}</span>{'certifications'}
           </h2>
           <div className="space-y-6">
-            {education.map((edu, index) => (
+            {certifications.map((group, index) => (
               <div key={index} className="terminal-card">
                 <div className="flex items-start gap-3">
                   <GraduationCap className="h-5 w-5 text-neon-400 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-bold text-gray-200">{edu.degree}</h3>
-                    <p className="text-cyber-400 text-sm">{edu.institution}</p>
-                    <p className="text-gray-400 mt-1">{edu.details}</p>
+                    <h3 className="text-lg font-bold text-gray-200">{group.category}</h3>
+                    <ul className="mt-2 space-y-1">
+                      {group.items.map((item) => (
+                        <li key={item} className="text-gray-400 flex items-start gap-2">
+                          <span className="text-neon-500 mt-1.5 flex-shrink-0">&#9656;</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
