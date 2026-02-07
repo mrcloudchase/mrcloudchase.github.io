@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ProjectsPage() {
-  const projects = getAllProjects()
+export default async function ProjectsPage() {
+  const projects = await getAllProjects()
 
   return (
     <div>

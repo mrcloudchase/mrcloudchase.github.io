@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   },
 }
 
-export default function Home() {
-  const featuredProjects = getFeaturedProjects()
+export default async function Home() {
+  const featuredProjects = await getFeaturedProjects()
   const latestPosts = getAllPosts().slice(0, 3)
 
   return (

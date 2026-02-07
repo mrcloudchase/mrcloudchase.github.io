@@ -1,4 +1,4 @@
-import { Github, ExternalLink } from 'lucide-react'
+import { Github, ExternalLink, Star } from 'lucide-react'
 import type { Project } from '@/lib/projects'
 
 type Props = {
@@ -28,6 +28,12 @@ export function ProjectCard({ project }: Props) {
           <Github className="h-5 w-5 mr-1.5" />
           Source
         </a>
+        {project.stars > 0 && (
+          <span className="inline-flex items-center text-gray-400 text-sm">
+            <Star className="h-4 w-4 mr-1" />
+            {project.stars}
+          </span>
+        )}
         {project.demoUrl && (
           <a
             href={project.demoUrl}
