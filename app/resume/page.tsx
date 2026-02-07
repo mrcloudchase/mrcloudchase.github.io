@@ -233,8 +233,8 @@ export default function ResumePage() {
                     <h3 className="text-lg font-bold text-gray-200">{group.category}</h3>
                     <ul className="mt-2 space-y-1">
                       {group.items.map((item) => (
-                        <li key={item} className="text-gray-400 flex items-start gap-2">
-                          <span className="text-neon-500 mt-1.5 flex-shrink-0">&#9656;</span>
+                        <li key={item} className="text-gray-400 flex items-center gap-2">
+                          <span className="text-neon-500 flex-shrink-0 text-xs">&#9656;</span>
                           {item}
                         </li>
                       ))}
