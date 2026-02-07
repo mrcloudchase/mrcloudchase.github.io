@@ -3,10 +3,10 @@ import { Download, Briefcase, GraduationCap } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Resume',
-  description: 'Resume of Chase Dovey — Cloud Architect & AI Engineer.',
+  description: 'Resume of Chase Dovey — AI Architect & Cloud Engineer.',
   openGraph: {
     title: 'Resume',
-    description: 'Resume of Chase Dovey — Cloud Architect & AI Engineer.',
+    description: 'Resume of Chase Dovey — AI Architect & Cloud Engineer.',
   },
   alternates: {
     canonical: '/resume/',
@@ -15,36 +15,109 @@ export const metadata: Metadata = {
 
 const experience = [
   {
-    title: 'Cloud Architect & AI Engineer',
-    company: 'Odovey Consulting',
-    period: '2022 – Present',
+    title: 'AI Architect',
+    company: 'HiddenLayer',
+    period: 'Oct 2025 – Present',
     highlights: [
-      'Design and implement multi-cloud architectures on Azure and AWS',
-      'Build AI-powered solutions including RAG systems and AI agents',
-      'Lead cloud migration and modernization initiatives',
-      'Develop infrastructure as code with Terraform and Bicep',
+      'Collaborate with organizations to design secure AI applications and agents, ensuring robust architecture',
+      'Develop seamless integrations into AI applications, enhancing secure user experiences and functionality',
+      'Engineer hardened generative AI workloads to optimize performance and security in production',
     ],
   },
   {
-    title: 'Senior Cloud Engineer',
-    company: 'Previous Company',
-    period: '2019 – 2022',
+    title: 'Founder',
+    company: 'Average Joes Lab',
+    period: 'Jul 2025 – Present',
     highlights: [
-      'Managed enterprise cloud infrastructure across Azure and AWS',
-      'Implemented CI/CD pipelines with GitHub Actions and Azure DevOps',
-      'Automated infrastructure provisioning with Terraform',
-      'Mentored junior engineers on cloud best practices',
+      'Founded Average Joes Lab to create a community-driven platform for accessible scientific research',
+      'Developed a Research Engineering Learning Path, empowering newcomers to become independent scientists',
+      'Built an open-source platform facilitating collaborative projects in AI, ML, and various scientific fields',
+      'Advocated for open science practices, promoting transparency and community peer review',
     ],
   },
   {
-    title: 'Systems Administrator',
-    company: 'Previous Company',
-    period: '2016 – 2019',
+    title: 'Co-Founder',
+    company: 'Chasing Cloud Careers',
+    period: 'Aug 2023 – Present',
     highlights: [
-      'Administered Windows and Linux server environments',
-      'Led initiatives to automate manual operations with PowerShell and Bash',
-      'Managed networking infrastructure and security policies',
-      'Supported organization-wide migration to cloud services',
+      'Co-founded Chasing Cloud Careers, focusing on accessible engineering education',
+      'Curated free learning resources into structured paths for various engineering roles',
+      'Mentored professionals in career transitions, fostering a supportive learning community',
+      'Developed self-directed learning approaches that empower individuals to explore technology careers',
+    ],
+  },
+  {
+    title: 'Senior Content Developer',
+    company: 'Microsoft',
+    period: 'Aug 2024 – Oct 2025',
+    highlights: [
+      'Spearheaded technical enablement for Azure Container Registry (ACR) on Microsoft Docs, integrating AI-driven workflows with cloud architecture expertise',
+      'Designed and published scenario-driven content, reaching over 500K developers monthly',
+      'Developed an AI-powered authoring pipeline, reducing content creation time from 3 days to under 5 minutes',
+    ],
+  },
+  {
+    title: 'Training Architect - Azure',
+    company: 'A Cloud Guru | Pluralsight',
+    period: 'Jun 2021 – Aug 2024',
+    highlights: [
+      'Promoted to Training Architect, overseeing course design, video delivery, and cloud lab engineering for Azure certification',
+      'Authored 9 certification courses, achieving over 20.8M minutes viewed and a 4.1/5 learner rating',
+      'Developed 50+ auto-provisioned labs, enabling 175K+ completions while reducing setup time by 90%',
+    ],
+  },
+  {
+    title: 'Associate Training Architect - Azure',
+    company: 'A Cloud Guru | Pluralsight',
+    period: 'Jul 2020 – Jun 2021',
+    highlights: [
+      'Designed and developed hands-on labs and foundational courses for Microsoft Azure training',
+      'Authored key certification prep materials, including Azure Administrator (AZ-104) courses',
+      'Implemented interactive content improvements, significantly increasing learner retention and engagement',
+    ],
+  },
+  {
+    title: 'Quality Documentation Analyst',
+    company: 'A Cloud Guru | Pluralsight',
+    period: 'Dec 2019 – Jul 2020',
+    highlights: [
+      'Owned the technical QA process for certification-aligned content across Linux, AWS, and cybersecurity domains',
+      'Audited over 150 hours of content, resolving ~1,300 tickets and enhancing course ratings from 4.3 to 4.6',
+      'Authored and refreshed 400+ exam assets, boosting learner pass rates by 10% for key certifications',
+      'Developed a scalable QA workflow in Zendesk, reducing ticket turnaround from 7 days to 2, achieving 99% SLA',
+    ],
+  },
+  {
+    title: 'Principal Cloud Architect',
+    company: 'CBTS',
+    period: 'May 2023 – Jul 2024',
+    highlights: [
+      'Promoted to Principal Cloud Architect, focusing on AI/LLM-driven architectures and enterprise AI adoption',
+      'Designed and implemented cloud-native PoCs using Hugging Face NLP models for various business applications',
+      'Conducted hands-on workshops and advised executives on scaling AI workloads across secure, multi-cloud platforms',
+      'Delivered 13 enterprise projects, averaging $94K per engagement, enhancing modernization and AI-enabled architecture',
+    ],
+  },
+  {
+    title: 'Senior Cloud Architect',
+    company: 'CBTS',
+    period: 'Sep 2021 – May 2023',
+    highlights: [
+      'Designed and implemented secure, scalable cloud solutions on Azure and AWS for migrations and modernization',
+      'Delivered enterprise-ready architectures focusing on IaC automation, reliability engineering, and performance optimization',
+      'Engineered reusable IaC patterns, reducing deployment errors by 40% and provisioning effort significantly',
+      'Mentored engineers and created a knowledge base, enhancing global support coverage and response times',
+    ],
+  },
+  {
+    title: 'Jr. Systems Administrator',
+    company: 'Endurance International Group',
+    period: 'Sep 2018 – Jun 2019',
+    highlights: [
+      'Supported shared, VPS, and dedicated hosting environments for over 600 SMB customers in a 24/7 operations team',
+      'Resolved ~105 support tickets monthly with a 96% customer satisfaction rate',
+      'Automated repetitive tasks using Bash, reducing average ticket handle time by 18%',
+      'Executed zero-downtime migrations for 80+ WordPress sites, ensuring SLA compliance',
     ],
   },
 ]
@@ -58,10 +131,11 @@ const education = [
 ]
 
 const skillGroups = [
-  { label: 'Cloud', items: 'Azure, AWS, GCP, Kubernetes, Docker' },
-  { label: 'AI/ML', items: 'LLMs, RAG, AI Agents, Python, Prompt Engineering' },
-  { label: 'DevOps', items: 'Terraform, GitHub Actions, CI/CD, Linux, Monitoring' },
-  { label: 'Development', items: 'TypeScript, Next.js, React, Go, Node.js, Bash' },
+  { label: 'Cloud', items: 'Azure, AWS, Kubernetes, Docker, Cloud Architecture, Multi-Cloud' },
+  { label: 'AI/ML', items: 'LLMs, RAG, AI Agents, Prompt Engineering, Data Science, Hugging Face' },
+  { label: 'DevOps', items: 'Terraform, GitHub Actions, CI/CD, Linux, Bash, Monitoring' },
+  { label: 'Dev', items: 'Python, TypeScript, Next.js, React, Node.js, Go' },
+  { label: 'Research', items: 'Research Methodologies, Technical Writing, Open Science, Community Building' },
 ]
 
 export default function ResumePage() {
@@ -76,7 +150,7 @@ export default function ResumePage() {
               <span className="text-neon-500 text-glow-green">resume</span>
             </h1>
             <p className="text-xl text-gray-400 mb-8">
-              Chase Dovey — Cloud Architect &amp; AI Engineer
+              Chase Dovey — AI Architect &amp; Cloud Engineer
             </p>
             <a
               href="/resume/chase-dovey-resume.pdf"
@@ -98,7 +172,7 @@ export default function ResumePage() {
           </h2>
           <div className="terminal-card">
             <p className="text-gray-300 leading-relaxed">
-              Cloud architect and AI engineer with experience designing scalable infrastructure and building intelligent systems. Specialized in multi-cloud architecture (Azure, AWS), AI/ML solutions, and DevOps automation. Passionate about open source, knowledge sharing, and helping teams ship faster.
+              AI architect and cloud engineer with a track record spanning secure AI application design, enterprise cloud architecture, and technical education at scale. Currently building hardened generative AI workloads at HiddenLayer. Previously designed content reaching 500K+ developers monthly at Microsoft, authored courses with 20.8M+ minutes viewed at A Cloud Guru, and delivered 13 enterprise AI/cloud projects at CBTS. Passionate about open science, accessible education, and community-driven learning.
             </p>
           </div>
         </div>
