@@ -206,8 +206,8 @@ export default function ResumePage() {
                 </div>
                 <ul className="space-y-2 ml-8">
                   {job.highlights.map((item, i) => (
-                    <li key={i} className="text-gray-400 flex items-start gap-2">
-                      <span className="text-neon-500 mt-1.5 flex-shrink-0">&#9656;</span>
+                    <li key={i} className="text-gray-400 flex items-center gap-2">
+                      <span className="text-neon-500 flex-shrink-0 text-xs">&#9656;</span>
                       {item}
                     </li>
                   ))}
