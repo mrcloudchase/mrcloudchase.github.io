@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Download, Briefcase, GraduationCap } from 'lucide-react'
+import { Download, Briefcase, GraduationCap, Heart } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Resume',
@@ -243,6 +243,26 @@ export default function ResumePage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Volunteer */}
+      <section className="section-padding">
+        <div className="container-max max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-200 font-mono mb-6">
+            <span className="text-surface-500">{'// '}</span>{'volunteer'}
+          </h2>
+          <div className="terminal-card">
+            <div className="flex items-start gap-3">
+              <Heart className="h-5 w-5 text-neon-400 mt-0.5 flex-shrink-0" />
+              <div>
+                <h3 className="text-lg font-bold text-gray-200">Robotics Mentor</h3>
+                <p className="text-cyber-400 text-sm">The Awty International School</p>
+                <p className="text-surface-500 text-sm font-mono">Aug 2025 – Present</p>
+                <p className="text-gray-400 mt-2">Mentoring students on programming and electrical engineering for FIRST Robotics Competition for FIRST Championship.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
