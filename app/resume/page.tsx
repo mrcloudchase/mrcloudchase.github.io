@@ -69,32 +69,12 @@ const experience = [
   {
     title: 'Training Architect - Azure',
     company: 'A Cloud Guru | Pluralsight',
-    period: 'Jun 2021 – Aug 2024',
+    period: 'Dec 2019 – Aug 2024',
     highlights: [
-      'Promoted to Training Architect, overseeing course design, video delivery, and cloud lab engineering for Azure certification',
-      'Authored 9 certification courses, achieving over 20.8M minutes viewed and a 4.1/5 learner rating',
+      'Authored 9 Azure certification courses, achieving over 20.8M minutes viewed and a 4.1/5 learner rating',
       'Developed 50+ auto-provisioned labs, enabling 175K+ completions while reducing setup time by 90%',
-    ],
-  },
-  {
-    title: 'Associate Training Architect - Azure',
-    company: 'A Cloud Guru | Pluralsight',
-    period: 'Jul 2020 – Jun 2021',
-    highlights: [
-      'Designed and developed hands-on labs and foundational courses for Microsoft Azure training',
-      'Authored key certification prep materials, including Azure Administrator (AZ-104) and Intro to Azure for AWS Admins courses',
-      'Implemented interactive content improvements, significantly increasing learner retention and engagement metrics',
-    ],
-  },
-  {
-    title: 'Quality Documentation Analyst',
-    company: 'A Cloud Guru | Pluralsight',
-    period: 'Dec 2019 – Jul 2020',
-    highlights: [
-      'Owned the technical QA process for certification-aligned content across Linux, AWS, and cybersecurity domains',
-      'Audited over 150 hours of content, resolving ~1,300 tickets and enhancing course ratings from 4.3 to 4.6',
+      'Audited over 150 hours of content, resolving ~1,300 tickets and improving course ratings from 4.3 to 4.6',
       'Authored and refreshed 400+ exam assets, boosting learner pass rates by 10% for key certifications',
-      'Developed a scalable QA workflow in Zendesk, reducing ticket turnaround from 7 days to 2, achieving 99% SLA',
     ],
   },
   {
