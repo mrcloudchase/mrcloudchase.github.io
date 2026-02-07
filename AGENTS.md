@@ -76,7 +76,7 @@ public/                 Static assets (images, resume PDF, robots.txt, llms.txt)
 
 **Dynamic Projects:** Projects are fetched from the GitHub API (`users/mrcloudchase/repos`) at build time. An `overrides` map in `lib/projects.ts` controls featured status, custom descriptions, demo URLs, and hidden repos. Forks are hidden by default unless overridden.
 
-**Resume PDF:** The downloadable resume PDF is generated at build time from `lib/resume-data.json` using Playwright. The same JSON file drives the web resume page. Update the JSON to change both. The PDF uses ATS/HRIS-optimized formatting (Arial font, standard headings, no table layouts, US Letter size).
+**Resume PDF:** The downloadable resume PDF is generated at build time from `lib/resume-data.json` using Playwright. The same JSON file drives the web resume page. Update the JSON to change both. The PDF uses ATS/HRIS-optimized formatting (Arial font, standard headings, no table layouts, US Letter size). Experience entries in the JSON must be ordered by start date, most recent first. When a company went through acquisitions, list all names separated by pipes (e.g., `"Linux Academy | A Cloud Guru | Pluralsight"`).
 
 ## Conventions
 
