@@ -9,7 +9,13 @@ import rehypeRaw from 'rehype-raw'
 import rehypeMermaid from 'rehype-mermaid'
 import rehypeStringify from 'rehype-stringify'
 
-const POSTS_DIRECTORY = path.join(process.cwd(), 'content/blog/posts')
+const BLOG_CONTENT_DIR = path.join(process.cwd(), 'content/blog')
+const POSTS_DIRECTORY = path.join(BLOG_CONTENT_DIR, 'posts')
+
+export type TagDefinition = {
+  name: string
+  description: string
+}
 
 export type BlogPostMeta = {
   slug: string
@@ -23,6 +29,36 @@ export type BlogPostMeta = {
 
 export type BlogPost = BlogPostMeta & {
   contentHtml: string
+}
+
+export function getTagDefinitions(): TagDefinition[] {
+  const tagsPath = path.join(BLOG_CONTENT_DIR, 'tags.json')
+  if (!fs.existsSync(tagsPath)) return []
+  const raw = JSON.parse(fs.readFileSync(tagsPath, 'utf8'))
+  return raw.tags ?? []
+}
+
+function getValidTagNames(): Set<string> {
+  return new Set(getTagDefinitions().map((t) => t.name))
+}
+
+function validateTags(tags: string[], filename: string, validTags: Set<string>): void {
+  for (const tag of tags) {
+    if (!validTags.has(tag)) {
+      console.warn(
+        `[blog] WARNING: Post "${filename}" uses undefined tag "${tag}". ` +
+          `Defined tags: ${[...validTags].join(', ')}`
+      )
+    }
+  }
+}
+
+function buildTagCatalogHtml(tags: TagDefinition[]): string {
+  if (tags.length === 0) return ''
+  const items = tags
+    .map((t) => `<li><strong>${t.name}</strong> \u2014 ${t.description}</li>`)
+    .join('\n')
+  return `<ul>\n${items}\n</ul>`
 }
 
 function calculateReadingTime(content: string): number {
@@ -47,6 +83,7 @@ export function getAllPosts(): BlogPostMeta[] {
   if (!fs.existsSync(POSTS_DIRECTORY)) return []
 
   const files = fs.readdirSync(POSTS_DIRECTORY).filter((file) => file.endsWith('.md'))
+  const validTags = getValidTagNames()
 
   const posts = files
     .map((filename) => {
@@ -56,13 +93,16 @@ export function getAllPosts(): BlogPostMeta[] {
 
       if (data.draft && process.env.NODE_ENV === 'production') return null
 
+      const tags: string[] = data.tags ?? []
+      if (validTags.size > 0) validateTags(tags, filename, validTags)
+
       const meta: BlogPostMeta = {
         slug: slugFromFilename(filename),
         title: data.title ?? '',
         date: data.date ?? '',
         excerpt: data.excerpt ?? '',
         author: data.author ?? '',
-        tags: data.tags ?? [],
+        tags,
         readingTime: calculateReadingTime(content),
       }
 
@@ -89,6 +129,11 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
 
   if (data.draft && process.env.NODE_ENV === 'production') return null
 
+  const tags: string[] = data.tags ?? []
+  const tagDefs = getTagDefinitions()
+  const validTags = new Set(tagDefs.map((t) => t.name))
+  if (validTags.size > 0) validateTags(tags, filename, validTags)
+
   const result = await unified()
     .use(remarkParse)
     .use(remarkGfm)
@@ -101,14 +146,19 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     .use(rehypeStringify)
     .process(content)
 
+  let contentHtml = result.toString()
+  if (contentHtml.includes('<!-- TAG_CATALOG -->')) {
+    contentHtml = contentHtml.replace('<!-- TAG_CATALOG -->', buildTagCatalogHtml(tagDefs))
+  }
+
   return {
     slug,
     title: data.title ?? '',
     date: data.date ?? '',
     excerpt: data.excerpt ?? '',
     author: data.author ?? '',
-    tags: data.tags ?? [],
+    tags,
     readingTime: calculateReadingTime(content),
-    contentHtml: result.toString(),
+    contentHtml,
   }
 }

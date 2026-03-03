@@ -68,6 +68,8 @@ public/                 Static assets (images, resume PDF, robots.txt, llms.txt)
 
 **Blog Content:** Blog posts live in the `mrcloudchase-blog` repository and are cloned into `content/blog/` at build time. Posts use `YYYY-MM-DD-slug.md` filenames with YAML frontmatter (title, date, excerpt, author, tags, draft). Do not commit blog content to this repo.
 
+**Tag System:** Valid tags are defined in `content/blog/tags.json` (from the blog repo). `lib/blog.ts` validates post tags at build time and warns on undefined tags. The `<!-- TAG_CATALOG -->` marker in markdown posts is replaced at render time with a generated list of all tag definitions.
+
 **Markdown Pipeline:** Posts are processed through unified → remark-parse → remark-gfm → remark-rehype → rehype-raw → rehype-mermaid (dark theme) → rehype-stringify. Mermaid diagrams require Playwright (Chromium) at build time for SVG rendering.
 
 **Static Params:** Dynamic blog routes use `generateStaticParams()` to pre-render all post pages. Any new dynamic routes must also use this pattern.
