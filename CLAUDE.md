@@ -1,1 +1,1 @@
-Always see the @AGENTS.md
+Always see the ./AGENTS.md
