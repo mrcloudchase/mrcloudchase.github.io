@@ -128,6 +128,7 @@ GitHub Actions (`.github/workflows/deploy-to-github-pages.yml`) runs on push to 
 
 ## Writing Style
 
+- Deep technical depth. Punchy and succinct. No fluff.
 - Do not use em-dashes. Use commas, periods, or hyphens instead.
 - Do not use emojis in code, comments, or documentation.
 
