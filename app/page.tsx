@@ -24,7 +24,7 @@ export default async function Home() {
           '@type': 'Person',
           name: 'Chase Dovey',
           url: 'https://cdovey.dev',
-          jobTitle: 'Cloud Architect & AI Engineer',
+          jobTitle: 'AI & Cloud Engineer',
           sameAs: [
             'https://github.com/mrcloudchase',
             'https://www.linkedin.com/in/chasedovey',
@@ -68,7 +68,7 @@ export default async function Home() {
               </div>
               <div className="text-gray-400 text-lg">
                 <TerminalText
-                  text="Cloud architect, AI engineer, and builder of things that scale. I design infrastructure, develop intelligent systems, and write about it along the way."
+                  text="AI and cloud engineer. Builder of things that scale. I design intelligent systems, build infrastructure, and write about it along the way."
                   speed={20}
                   delay={1500}
                 />

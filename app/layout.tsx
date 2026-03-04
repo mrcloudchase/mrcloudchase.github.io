@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://cdovey.dev'),
   title: {
     template: '%s | Chase Dovey',
-    default: 'Chase Dovey - Cloud Architect & AI Engineer',
+    default: 'Chase Dovey - AI & Cloud Engineer',
   },
-  description: 'Cloud architect, AI engineer, and builder of things that scale. Exploring cloud infrastructure, AI, and modern development.',
-  keywords: 'cloud architect, AI engineer, cloud computing, Azure, AWS, DevOps, infrastructure as code, Chase Dovey',
+  description: 'AI and cloud engineer. Builder of things that scale. Exploring AI engineering, cloud infrastructure, and modern development.',
+  keywords: 'AI engineer, cloud engineer, AI engineering, cloud computing, Azure, AWS, DevOps, infrastructure as code, Chase Dovey',
   authors: [{ name: 'Chase Dovey' }],
   robots: {
     index: true,
@@ -23,9 +23,16 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
-    title: 'Chase Dovey - Cloud Architect & AI Engineer',
-    description: 'Cloud architect, AI engineer, and builder of things that scale.',
+    title: 'Chase Dovey - AI & Cloud Engineer',
+    description: 'AI and cloud engineer. Builder of things that scale.',
     url: 'https://cdovey.dev',
     siteName: 'Chase Dovey',
     locale: 'en_US',
@@ -35,14 +42,14 @@ export const metadata: Metadata = {
         url: '/images/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'Chase Dovey - Cloud Architect & AI Engineer',
+        alt: 'Chase Dovey - AI & Cloud Engineer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chase Dovey - Cloud Architect & AI Engineer',
-    description: 'Cloud architect, AI engineer, and builder of things that scale.',
+    title: 'Chase Dovey - AI & Cloud Engineer',
+    description: 'AI and cloud engineer. Builder of things that scale.',
     images: ['/images/og-default.png'],
   },
   alternates: {

@@ -3,10 +3,10 @@ import { Cloud, Brain, Terminal, Server } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Cloud architect, AI engineer, and builder of things that scale. Learn more about Chase Dovey.',
+  description: 'AI and cloud engineer. Builder of things that scale. Learn more about Chase Dovey.',
   openGraph: {
     title: 'About',
-    description: 'Cloud architect, AI engineer, and builder of things that scale. Learn more about Chase Dovey.',
+    description: 'AI and cloud engineer. Builder of things that scale. Learn more about Chase Dovey.',
   },
   alternates: {
     canonical: '/about/',
@@ -39,7 +39,7 @@ const skillCategories = [
 const timeline = [
   {
     period: 'Present',
-    title: 'Cloud Architect & AI Engineer',
+    title: 'AI & Cloud Engineer',
     description: 'Designing scalable cloud infrastructure and building intelligent systems. Specializing in multi-cloud architecture, AI agent development, and DevOps automation.',
   },
   {
@@ -82,7 +82,7 @@ export default function AboutPage() {
               </div>
               <div className="p-6 md:p-8 space-y-4">
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  I&apos;m Chase Dovey — a cloud architect and AI engineer based in Houston, Texas. I design scalable infrastructure, build intelligent systems, and help teams ship faster.
+                  I&apos;m Chase Dovey, an AI and cloud engineer based in Houston, Texas. I build intelligent systems, design scalable infrastructure, and help teams ship faster.
                 </p>
                 <p className="text-gray-400 leading-relaxed">
                   My work sits at the intersection of cloud infrastructure and artificial intelligence. I believe in building systems that are not just powerful, but maintainable, observable, and well-documented.
