@@ -8,7 +8,7 @@ Chase Dovey's personal website and blog, built with Next.js 16 (App Router), Typ
 
 ## Tech Stack
 
-- **Framework:** Next.js 16 with App Router (`output: 'export'` — fully static)
+- **Framework:** Next.js 16 with App Router (`output: 'export'`, fully static)
 - **Language:** TypeScript 5.9 (strict mode)
 - **Runtime:** Node.js 22 LTS
 - **Styling:** Tailwind CSS 4 with PostCSS
@@ -126,12 +126,17 @@ GitHub Actions (`.github/workflows/deploy-to-github-pages.yml`) runs on push to 
 8. `npm run build` (generates resume PDF → builds site → generates sitemap)
 9. Deploy `out/` to GitHub Pages
 
+## Writing Style
+
+- Do not use em-dashes. Use commas, periods, or hyphens instead.
+- Do not use emojis in code, comments, or documentation.
+
 ## Things to Avoid
 
-- Do not add API routes or server-side rendering — the site is statically exported.
-- Do not commit anything in `content/blog/` — it is gitignored and fetched at build time.
-- Do not use light theme colors — maintain the dark terminal aesthetic.
+- Do not add API routes or server-side rendering - the site is statically exported.
+- Do not commit anything in `content/blog/` - it is gitignored and fetched at build time.
+- Do not use light theme colors - maintain the dark terminal aesthetic.
 - Do not disable strict TypeScript mode.
 - Do not use fonts other than JetBrains Mono (headings/code) and Inter (body).
-- Do not hardcode resume data in the page — always use `lib/resume-data.json`.
-- Do not hardcode project data — projects are fetched from GitHub API; use the `overrides` map in `lib/projects.ts` for customization.
+- Do not hardcode resume data in the page - always use `lib/resume-data.json`.
+- Do not hardcode project data - projects are fetched from GitHub API; use the `overrides` map in `lib/projects.ts` for customization.

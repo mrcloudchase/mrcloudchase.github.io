@@ -56,7 +56,7 @@ function validateTags(tags: string[], filename: string, validTags: Set<string>):
 function buildTagCatalogHtml(tags: TagDefinition[]): string {
   if (tags.length === 0) return ''
   const items = tags
-    .map((t) => `<li><strong>${t.name}</strong> \u2014 ${t.description}</li>`)
+    .map((t) => `<li><strong>${t.name}</strong> - ${t.description}</li>`)
     .join('\n')
   return `<ul>\n${items}\n</ul>`
 }
