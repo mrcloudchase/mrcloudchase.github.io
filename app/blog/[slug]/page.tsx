@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { Calendar, Clock, ArrowLeft, User } from 'lucide-react'
 import { getAllPostSlugs, getPostBySlug } from '@/lib/blog'
 import { JsonLd } from '@/components/JsonLd'
+import BlogContent from '@/components/BlogContent'
 import type { Metadata } from 'next'
 
 export function generateStaticParams() {
@@ -131,10 +132,7 @@ export default async function BlogPostPage({
       {/* Content Section */}
       <section className="section-padding">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className="prose-blog"
-            dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-          />
+          <BlogContent html={post.contentHtml} />
         </div>
       </section>
 

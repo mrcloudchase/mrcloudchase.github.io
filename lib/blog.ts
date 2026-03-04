@@ -6,6 +6,8 @@ import remarkParse from 'remark-parse'
 import remarkGfm from 'remark-gfm'
 import remarkRehype from 'remark-rehype'
 import rehypeRaw from 'rehype-raw'
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeMermaid from 'rehype-mermaid'
 import rehypeStringify from 'rehype-stringify'
 
@@ -139,6 +141,17 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
+    .use(rehypeSlug)
+    .use(rehypeAutolinkHeadings, {
+      behavior: 'prepend',
+      properties: { className: ['heading-anchor'], ariaLabel: 'Link to this section' },
+      content: {
+        type: 'element',
+        tagName: 'span',
+        properties: { className: ['heading-anchor-icon'] },
+        children: [{ type: 'text', value: '#' }],
+      },
+    })
     .use(rehypeMermaid, {
       strategy: 'inline-svg',
       mermaidConfig: { theme: 'dark' },
