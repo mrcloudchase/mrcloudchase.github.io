@@ -177,7 +177,7 @@ export default async function Home() {
                   <div className="flex items-center text-sm text-surface-500">
                     <Calendar className="h-4 w-4 mr-1.5" />
                     <time dateTime={post.date}>
-                      {new Date(post.date).toLocaleDateString('en-US', {
+                      {new Date(post.date + 'T00:00:00').toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'short',
                         day: 'numeric',
