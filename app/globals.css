@@ -154,7 +154,7 @@
       @apply text-cyber-400 opacity-100;
     }
     .heading-anchor-icon {
-      @apply font-mono text-sm;
+      @apply inline-block align-middle;
     }
 
     /* Mermaid diagrams (rendered as inline SVGs) */
