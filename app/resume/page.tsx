@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Download, Briefcase, GraduationCap, Heart } from 'lucide-react'
+import { Download, Briefcase, GraduationCap, Heart, FolderGit2 } from 'lucide-react'
 import resumeData from '@/lib/resume-data.json'
 
 export const metadata: Metadata = {
@@ -79,6 +79,38 @@ export default function ResumePage() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Selected Projects */}
+      <section className="section-padding">
+        <div className="container-max max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-200 font-mono mb-6">
+            <span className="text-surface-500">{'// '}</span>{'selected_projects'}
+          </h2>
+          <div className="space-y-6">
+            {resumeData.projects.map((project, index) => (
+              <div key={index} className="terminal-card">
+                <div className="flex items-start gap-3">
+                  <FolderGit2 className="h-5 w-5 text-neon-400 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-200">{project.name}</h3>
+                    <p className="text-gray-400 mt-2">{project.description}</p>
+                    {project.url && (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-2 text-cyber-400 hover:text-cyber-300 text-sm transition-colors"
+                      >
+                        {project.url.replace('https://', '')}
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
             ))}
           </div>

@@ -78,6 +78,17 @@ ${data.experience
   )
   .join('\n')}
 
+<h2>Selected Projects</h2>
+${data.projects
+  .map(
+    (p) => `
+<div class="job">
+  <div class="job-title">${p.name}</div>
+  <p style="margin-top: 1pt;">${p.description}${p.url ? ` (${p.url.replace('https://', '')})` : ''}</p>
+</div>`
+  )
+  .join('\n')}
+
 <h2>Certifications</h2>
 <ul class="certs">
   ${certsList.map((c) => `<li>${c}</li>`).join('\n  ')}

@@ -1,21 +1,22 @@
 {
   "name": "Chase Dovey",
-  "title": "AI Architect & Cloud Engineer",
+  "title": "AI Architect & Engineering Leader",
   "email": "chase@cdovey.dev",
   "website": "https://cdovey.dev",
   "linkedin": "https://www.linkedin.com/in/chasedovey",
   "github": "https://github.com/mrcloudchase",
   "location": "Houston, TX",
-  "summary": "AI architect and cloud engineer with a track record spanning secure AI application design, enterprise cloud architecture, and technical education at scale. Currently building hardened generative AI workloads at HiddenLayer, leading AI strategy at Odovey Consulting, and driving open science at Average Joes Lab. Previously designed content reaching 500K+ developers monthly at Microsoft, authored courses with 20.8M+ minutes viewed at A Cloud Guru, and delivered 13 enterprise AI/cloud projects at CBTS. Passionate about open science, accessible education, and community-driven learning.",
+  "summary": "AI engineering leader specializing in the design and security of production agentic systems. I architect agent runtimes, tool execution and sandboxing, memory and retrieval, orchestration, and evaluation, then build the guardrails and red-teaming that keep them reliable in adversarial, high-consequence environments. At HiddenLayer I secure agentic systems for enterprise customers and build product for agentic red teaming and adversarial prompt engineering. I founded cAIge, the vendor-agnostic Certified AI Guardrail Engineer program, defining an industry taxonomy for prompt-injection defense, data-exfiltration prevention, and guardrail validation. Deep working knowledge of foundation-model internals and the math beneath them, backed by a decade of architecture, engineering, and technical leadership across enterprise and education at scale.",
   "experience": [
     {
       "title": "AI Architect",
       "company": "HiddenLayer",
       "period": "Oct 2025 – Present",
       "highlights": [
-        "Collaborated with organizations to design secure AI applications and agents, ensuring robust architecture",
-        "Developed seamless integrations into AI applications, enhancing secure user experiences and functionality",
-        "Engineered hardened generative AI workloads to optimize performance and security in production"
+        "Architect and secure production agentic systems for enterprise customers: agent loops, tool execution and sandboxing, memory and retrieval, and security boundaries, threat-modeling prompt injection, tool-output poisoning, and sandbox escape",
+        "Build product for agentic red teaming and adversarial prompt engineering, generating multi-turn attack flows that surface misuse and failure modes in customer AI systems",
+        "Develop core platform capabilities and customer integrations, turning research prototypes into reliable, shipped product",
+        "Advise customers on evaluation and guardrail strategy grounded in foundation-model internals, balancing operator trust, reliability, and performance"
       ]
     },
     {
@@ -23,10 +24,10 @@
       "company": "Average Joes Lab",
       "period": "Jul 2025 – Present",
       "highlights": [
-        "Founded Average Joes Lab to create a community-driven platform for accessible scientific research",
-        "Developed a Research Engineering Learning Path, empowering newcomers to become independent scientists",
-        "Built an open-source platform facilitating collaborative projects in AI, ML, and various scientific fields",
-        "Advocated for open science practices, promoting transparency and community peer review to enhance research quality"
+        "Founded an open, community-driven research lab and lead its applied AI work: agent runtimes, episodic and semantic memory harnesses, sandboxed tool execution, and multi-provider inference gateways",
+        "Drove autonomous-research programs to systematically discover better context-management, memory, tool-use, planning, and orchestration strategies for agents",
+        "Built adversarial-AI research, including a generalized red-team agent and a zero-training, embedding-space prompt-injection detector",
+        "Authored a framework-free, code-first agentic-engineering curriculum and a research-engineering learning path, mentoring newcomers into independent research"
       ]
     },
     {
@@ -34,9 +35,9 @@
       "company": "Odovey Consulting",
       "period": "Jun 2025 – Present",
       "highlights": [
-        "Spearheaded the AI adoption strategy for Odovey Consulting, ensuring alignment with organizational goals",
-        "Drove the implementation of AI and Cloud strategies, enhancing operational efficiency and innovation",
-        "Conducted AI workload development to optimize performance and scalability across projects"
+        "Lead AI and cloud strategy for enterprise clients: AI agent development, RAG implementation, supervised fine-tuning, and AI model infrastructure",
+        "Authored a vendor-agnostic GenAI adoption framework for planning, governing, and scaling generative AI across the enterprise",
+        "Advise executives on AI architecture and adoption, aligning AI investments with security and measurable business outcomes"
       ]
     },
     {
@@ -94,6 +95,43 @@
       ]
     }
   ],
+  "projects": [
+    {
+      "name": "cAIge: Certified AI Guardrail Engineer",
+      "description": "Founded the vendor-agnostic AI guardrail engineering certification: a five-domain taxonomy and exam covering prompt-injection defense, data-exfiltration prevention, adversarial attack mitigation, and guardrail validation.",
+      "url": "https://caige.org"
+    },
+    {
+      "name": "Agent runtimes and orchestration",
+      "description": "Standalone agent execution engines, the loop, tool dispatch, and event streaming, plus orchestration patterns (routing, orchestrator-workers, evaluator-optimizer) and a code-first agentic-engineering curriculum.",
+      "url": ""
+    },
+    {
+      "name": "Sandboxed tool execution",
+      "description": "Isolated Docker execution for agent tools with seccomp, dropped capabilities, resource limits, egress control, and lifecycle management to contain prompt-injection blast radius.",
+      "url": ""
+    },
+    {
+      "name": "Agent memory harnesses",
+      "description": "Episodic and semantic memory for agents: write-time fact extraction, hybrid BM25-plus-vector retrieval, and token-accurate working-memory management.",
+      "url": ""
+    },
+    {
+      "name": "Adversarial AI and red teaming",
+      "description": "A generalized red-team agent and a zero-training, embedding-space prompt-injection detector for evaluating and hardening agentic systems.",
+      "url": ""
+    },
+    {
+      "name": "Inference gateways and engines",
+      "description": "Multi-provider LLM gateways with routing, fallbacks, PII guardrails, quotas, and observability, plus an LLM inference engine and runtime built from scratch in Rust, Go, and PyTorch.",
+      "url": ""
+    },
+    {
+      "name": "Technical writing: cdovey.dev",
+      "description": "A deep technical series on LLM internals, agent architecture, and AI security: agent loops, memory, sandboxing, prompt injection, red teaming, and evaluation.",
+      "url": "https://cdovey.dev/blog"
+    }
+  ],
   "certifications": [
     {
       "category": "Microsoft Azure",
@@ -138,10 +176,10 @@
     "description": "Mentoring students on programming and electrical engineering for FIRST Robotics Competition for FIRST Championship."
   },
   "skillGroups": [
-    { "label": "Cloud", "items": "Azure, AWS, Kubernetes, Docker, Cloud Architecture, Multi-Cloud" },
-    { "label": "AI/ML", "items": "LLMs, RAG, AI Agents, Prompt Engineering, Data Science, Hugging Face" },
-    { "label": "DevOps", "items": "Terraform, GitHub Actions, CI/CD, Linux, Bash, Monitoring" },
-    { "label": "Dev", "items": "Python, TypeScript, Next.js, React, Node.js, Go" },
-    { "label": "Research", "items": "Research Methodologies, Technical Writing, Open Science, Community Building" }
+    { "label": "AI/Agentic", "items": "Agentic systems, agent orchestration, tool use, sandboxing, RAG, memory, evaluation, LLMs, foundation models" },
+    { "label": "AI Security", "items": "Prompt-injection defense, red teaming, guardrails, model gateways, misuse resistance, threat modeling" },
+    { "label": "Engineering", "items": "Python, TypeScript, Go, Next.js, React, Node.js, distributed systems" },
+    { "label": "Cloud/DevOps", "items": "Azure, AWS, Kubernetes, Docker, Terraform, CI/CD, observability" },
+    { "label": "Leadership", "items": "Technical strategy, architecture, mentoring, technical writing, executive communication" }
   ]
 }
