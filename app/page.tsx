@@ -24,7 +24,7 @@ export default async function Home() {
           '@type': 'Person',
           name: 'Chase Dovey',
           url: 'https://cdovey.dev',
-          jobTitle: 'AI & Cloud Engineer',
+          jobTitle: 'AI Architect & Engineering Leader',
           sameAs: [
             'https://github.com/mrcloudchase',
             'https://www.linkedin.com/in/chasedovey',
@@ -68,7 +68,7 @@ export default async function Home() {
               </div>
               <div className="text-gray-400 text-lg">
                 <TerminalText
-                  text="AI and cloud engineer. Builder of things that scale. I design intelligent systems, build infrastructure, and write about it along the way."
+                  text="AI engineering leader. I design and secure production agentic systems: agent runtimes, tool use, memory, and the guardrails and red-teaming that keep them reliable. I write about how it all works."
                   speed={20}
                   delay={1500}
                 />
@@ -141,7 +141,7 @@ export default async function Home() {
               <span className="text-surface-500">{'// '}</span>{'latest_posts'}
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Thoughts on cloud, AI, and engineering.
+              Thoughts on AI engineering, agents, and security.
             </p>
           </div>
 

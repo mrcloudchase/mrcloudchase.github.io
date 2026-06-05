@@ -1,7 +1,7 @@
 # Chase Dovey — cdovey.dev
 
 ## Who
-Chase Dovey is a cloud architect and AI engineer. He designs scalable infrastructure, builds intelligent systems, and writes about cloud, AI, and modern development.
+Chase Dovey is an AI engineering leader. He designs and secures production agentic systems, builds the guardrails and red-teaming that keep them reliable, and writes about how LLMs and agents work.
 
 ## Website
 - URL: https://cdovey.dev
@@ -16,10 +16,10 @@ Chase Dovey is a cloud architect and AI engineer. He designs scalable infrastruc
 - Resume: https://cdovey.dev/resume/
 
 ## Topics
+- AI Engineering (agentic systems, agent runtimes, orchestration, LLMs, RAG)
+- AI Security (prompt injection, red teaming, guardrails, sandboxing)
+- Foundation models and inference internals
 - Cloud Architecture (Azure, AWS, multi-cloud)
-- AI Engineering (LLMs, RAG, AI agents)
-- DevOps & Automation (CI/CD, IaC, Terraform)
-- Infrastructure as Code
 - Open Source
 
 ## Contact

@@ -17,7 +17,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-gray-400 mb-6 max-w-md">
-              AI and cloud engineer. Builder of things that scale.
+              AI engineering leader. I design and secure agentic systems.
             </p>
             <div className="flex space-x-4">
               <a

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Cloud, Brain, Terminal, Server } from 'lucide-react'
+import { Cloud, Brain, Shield, Cpu } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'AI and cloud engineer. Builder of things that scale. Learn more about Chase Dovey.',
+  description: 'AI engineering leader specializing in agentic systems and AI security. Learn more about Chase Dovey.',
   openGraph: {
     title: 'About',
-    description: 'AI and cloud engineer. Builder of things that scale. Learn more about Chase Dovey.',
+    description: 'AI engineering leader specializing in agentic systems and AI security. Learn more about Chase Dovey.',
   },
   alternates: {
     canonical: '/about/',
@@ -15,42 +15,42 @@ export const metadata: Metadata = {
 
 const skillCategories = [
   {
-    name: 'Cloud & Infrastructure',
-    icon: Cloud,
-    skills: ['Azure', 'AWS', 'Terraform', 'Kubernetes', 'Docker', 'GitHub Actions'],
-  },
-  {
-    name: 'AI & Machine Learning',
+    name: 'Agentic Systems',
     icon: Brain,
-    skills: ['LLMs', 'RAG', 'AI Agents', 'Python', 'Prompt Engineering', 'Fine-Tuning'],
+    skills: ['Agent runtimes', 'Tool use', 'Sandboxing', 'Memory & retrieval', 'Orchestration', 'Evaluation'],
   },
   {
-    name: 'Development',
-    icon: Terminal,
-    skills: ['TypeScript', 'Next.js', 'React', 'Node.js', 'Go', 'Bash'],
+    name: 'AI Security',
+    icon: Shield,
+    skills: ['Prompt-injection defense', 'Red teaming', 'Guardrails', 'Misuse resistance', 'Threat modeling'],
   },
   {
-    name: 'DevOps & Platform',
-    icon: Server,
-    skills: ['CI/CD', 'IaC', 'Monitoring', 'Linux', 'Networking', 'Security'],
+    name: 'AI & ML',
+    icon: Cpu,
+    skills: ['LLMs', 'RAG', 'Foundation models', 'Fine-Tuning', 'Model gateways', 'Python'],
+  },
+  {
+    name: 'Engineering & Cloud',
+    icon: Cloud,
+    skills: ['TypeScript', 'Go', 'Next.js', 'Azure', 'AWS', 'Kubernetes', 'Terraform', 'CI/CD'],
   },
 ]
 
 const timeline = [
   {
     period: 'Present',
-    title: 'AI & Cloud Engineer',
-    description: 'Designing scalable cloud infrastructure and building intelligent systems. Specializing in multi-cloud architecture, AI agent development, and DevOps automation.',
+    title: 'AI Architect & Engineering Leader',
+    description: 'Designing and securing production agentic systems: agent runtimes, sandboxing, memory, orchestration, and evaluation, plus the guardrails and red-teaming that keep them reliable in adversarial environments.',
   },
   {
     period: 'Previous',
-    title: 'Cloud Engineer',
-    description: 'Built and managed cloud infrastructure at scale. Led cloud migration projects and implemented infrastructure as code across Azure and AWS.',
+    title: 'Cloud & AI Architect',
+    description: 'Designed secure, scalable cloud and AI-enabled architecture for enterprise migrations and modernization across Azure and AWS, and built AI-driven content reaching hundreds of thousands of developers.',
   },
   {
     period: 'Earlier',
     title: 'Systems Administrator',
-    description: 'Managed enterprise IT infrastructure, automated operations, and built the foundation for moving to cloud-first architecture.',
+    description: 'Managed enterprise IT infrastructure, automated operations, and built the foundation for cloud-first architecture.',
   },
 ]
 
@@ -82,13 +82,13 @@ export default function AboutPage() {
               </div>
               <div className="p-6 md:p-8 space-y-4">
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  I&apos;m Chase Dovey, an AI and cloud engineer based in Houston, Texas. I build intelligent systems, design scalable infrastructure, and help teams ship faster.
+                  I&apos;m Chase Dovey, an AI engineering leader based in Houston, Texas. I design and secure production agentic systems, and build the guardrails and red-teaming that keep them reliable.
                 </p>
                 <p className="text-gray-400 leading-relaxed">
-                  My work sits at the intersection of cloud infrastructure and artificial intelligence. I believe in building systems that are not just powerful, but maintainable, observable, and well-documented.
+                  My work sits at the intersection of agentic systems and AI security. I build systems that are not just capable, but observable, contained, and well-documented, then I try to break them before anyone else can.
                 </p>
                 <p className="text-gray-400 leading-relaxed">
-                  When I&apos;m not architecting cloud solutions, I&apos;m contributing to open source, writing about what I learn, and exploring the latest in AI engineering. I&apos;m passionate about sharing knowledge and helping others grow in their careers.
+                  When I&apos;m not architecting or securing agent systems, I&apos;m contributing to open source, writing about how LLMs and agents actually work, and building cAIge, a vendor-agnostic certification for AI guardrail engineering. I&apos;m passionate about sharing knowledge and helping others grow.
                 </p>
               </div>
             </div>
