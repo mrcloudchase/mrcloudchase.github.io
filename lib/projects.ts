@@ -6,6 +6,7 @@ export type Project = {
   demoUrl?: string
   featured: boolean
   stars: number
+  pushedAt: string
 }
 
 // Override specific repos: set featured, custom description, demo URL, or hide them
@@ -54,6 +55,8 @@ const overrides: Record<string, Partial<Project> & { hidden?: boolean }> = {
   'opencode': { hidden: true },
   'weaviate': { hidden: true },
   'mrcloudchase-blog': { hidden: true },
+  'averagejoeslab-blog': { hidden: true },
+  'odovey-blog': { hidden: true },
   'API-APP-01': { hidden: true },
   'API-APP-02': { hidden: true },
   'API-APP-03': { hidden: true },
@@ -100,6 +103,7 @@ type GitHubRepo = {
   fork: boolean
   language: string | null
   topics: string[]
+  pushed_at: string | null
 }
 
 // Fetched at build time and cached in module scope
@@ -127,30 +131,34 @@ function buildProjectsFromRepos(repos: GitHubRepo[]): Project[] {
         demoUrl: override.demoUrl ?? repo.homepage ?? undefined,
         featured: override.featured ?? false,
         stars: repo.stargazers_count,
+        pushedAt: repo.pushed_at ?? '',
       }
     })
-    .sort((a, b) => {
-      // Featured first, then by stars, then alphabetical
-      if (a.featured !== b.featured) return a.featured ? -1 : 1
-      if (a.stars !== b.stars) return b.stars - a.stars
-      return a.name.localeCompare(b.name)
-    })
+    // Most recently pushed first, so active work surfaces at the top
+    .sort((a, b) => b.pushedAt.localeCompare(a.pushedAt))
 }
 
-async function fetchFromGitHub(): Promise<GitHubRepo[]> {
+// Public repos are pulled from the personal account plus the owned orgs.
+const GITHUB_SOURCES = [
+  'https://api.github.com/users/mrcloudchase/repos',
+  'https://api.github.com/orgs/averagejoeslab/repos',
+  'https://api.github.com/orgs/Odovey-Consulting/repos',
+]
+
+async function fetchReposFrom(baseUrl: string): Promise<GitHubRepo[]> {
   const repos: GitHubRepo[] = []
   let page = 1
 
   for (;;) {
-    const url = `https://api.github.com/users/mrcloudchase/repos?per_page=100&page=${page}&sort=updated`
+    const url = `${baseUrl}?per_page=100&page=${page}&sort=pushed`
     const res = await fetch(url, {
       headers: { 'Accept': 'application/vnd.github+json' },
       next: { revalidate: false },
     })
 
     if (!res.ok) {
-      console.warn(`GitHub API returned ${res.status} — falling back to empty project list`)
-      return []
+      console.warn(`GitHub API ${baseUrl} returned ${res.status} — skipping this source`)
+      return repos
     }
 
     const data = await res.json() as GitHubRepo[]
@@ -160,6 +168,21 @@ async function fetchFromGitHub(): Promise<GitHubRepo[]> {
   }
 
   return repos
+}
+
+async function fetchFromGitHub(): Promise<GitHubRepo[]> {
+  const perSource = await Promise.all(GITHUB_SOURCES.map(fetchReposFrom))
+
+  // Merge across sources, de-duplicating by repo URL
+  const seen = new Set<string>()
+  const merged: GitHubRepo[] = []
+  for (const repo of perSource.flat()) {
+    if (seen.has(repo.html_url)) continue
+    seen.add(repo.html_url)
+    merged.push(repo)
+  }
+
+  return merged
 }
 
 export async function getAllProjects(): Promise<Project[]> {
