@@ -9,18 +9,19 @@
   "summary": "AI engineering leader specializing in the design and security of production agentic systems. I architect agent runtimes, tool execution and sandboxing, memory and retrieval, orchestration, and evaluation, then build the guardrails and red-teaming that keep them reliable in adversarial, high-consequence environments. At HiddenLayer I secure agentic systems for enterprise customers and build product for agentic red teaming and adversarial prompt engineering. I founded cAIge, the vendor-agnostic Certified AI Guardrail Engineer program, defining an industry taxonomy for prompt-injection defense, data-exfiltration prevention, and guardrail validation. Deep working knowledge of foundation-model internals and the math beneath them, backed by a decade of architecture, engineering, and technical leadership across enterprise and education at scale.",
   "experience": [
     {
-      "title": "AI Architect",
+      "title": "AI Architect/Engineer (Agentic Systems Security)",
       "company": "HiddenLayer",
       "period": "Oct 2025 – Present",
       "highlights": [
         "Architect and secure production agentic systems for enterprise customers: agent loops, tool execution and sandboxing, memory and retrieval, and security boundaries, threat-modeling prompt injection, tool-output poisoning, and sandbox escape",
+        "Instrument agentic workloads for runtime protection against threats like prompt injection, and architect supply chain protections into CI/CD for secure model development",
         "Build product for agentic red teaming and adversarial prompt engineering, generating multi-turn attack flows that surface misuse and failure modes in customer AI systems",
         "Develop core platform capabilities and customer integrations, turning research prototypes into reliable, shipped product",
-        "Advise customers on evaluation and guardrail strategy grounded in foundation-model internals, balancing operator trust, reliability, and performance"
+        "Partner with enterprise customers to design secure AI applications and agents, advising on evaluation and guardrail strategy grounded in foundation-model internals"
       ]
     },
     {
-      "title": "Chief Research Scientist",
+      "title": "Chief Research Scientist (Agentic Systems Research)",
       "company": "Average Joes Lab",
       "period": "Jul 2025 – Present",
       "highlights": [
@@ -45,13 +46,14 @@
       "company": "Microsoft",
       "period": "Aug 2024 – Oct 2025",
       "highlights": [
-        "Spearheaded technical enablement for Azure Container Registry (ACR) on Microsoft Docs, integrating AI-driven workflows with cloud architecture expertise",
-        "Designed and published scenario-driven content, reaching over 500K developers monthly",
-        "Developed an AI-powered authoring pipeline, reducing time-to-first-draft from 3 days to under 5 minutes"
+        "Developed a workflow-based agentic authoring system using prompt orchestration, contextual grounding, and RAG, reducing time-to-first-draft from three days to under five minutes",
+        "Contributed to Azure Copilot evaluation by implementing LLM-as-a-judge methodologies and grading rubrics to assess accuracy, relevance, groundedness, and response quality",
+        "Led Azure Container Registry technical enablement, creating scenario-driven content reaching more than 500K developers monthly",
+        "Designed context and prompt frameworks that improved the reliability and usefulness of AI-powered developer experiences"
       ]
     },
     {
-      "title": "Chief Executive Officer",
+      "title": "Founder",
       "company": "Chasing Cloud Careers",
       "period": "Aug 2023 – Present",
       "highlights": [
