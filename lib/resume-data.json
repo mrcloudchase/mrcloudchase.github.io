@@ -6,7 +6,7 @@
   "linkedin": "https://www.linkedin.com/in/chasedovey",
   "github": "https://github.com/mrcloudchase",
   "location": "Houston, TX",
-  "summary": "AI engineering leader specializing in the design and security of production agentic systems. I architect agent runtimes, tool execution and sandboxing, memory and retrieval, orchestration, and evaluation, then build the guardrails and red-teaming that keep them reliable in adversarial, high-consequence environments. At HiddenLayer I secure agentic systems for enterprise customers and build product for agentic red teaming and adversarial prompt engineering. I founded cAIge, the vendor-agnostic Certified AI Guardrail Engineer program, defining an industry taxonomy for prompt-injection defense, data-exfiltration prevention, and guardrail validation. Deep working knowledge of foundation-model internals and the math beneath them, backed by a decade of architecture, engineering, and technical leadership across enterprise and education at scale.",
+  "summary": "AI engineering leader specializing in the design and security of production agentic systems. I architect agent runtimes, tool execution and sandboxing, memory and retrieval, orchestration, and evaluation, then build the guardrails and red-teaming that keep them reliable in adversarial, high-consequence environments. At HiddenLayer I secure agentic systems for enterprise customers, instrumenting agentic workloads for runtime protection and building product for agentic red teaming and adversarial prompt engineering. I founded cAIge, the vendor-agnostic Certified AI Guardrail Engineer program, defining an industry taxonomy for prompt-injection defense, data-exfiltration prevention, and guardrail validation. Deep working knowledge of foundation-model internals and the math beneath them, backed by a decade of architecture, engineering, and technical leadership across enterprise and education at scale.",
   "experience": [
     {
       "title": "AI Architect/Engineer (Agentic Systems Security)",
@@ -179,7 +179,7 @@
   },
   "skillGroups": [
     { "label": "AI/Agentic", "items": "Agentic systems, agent orchestration, tool use, sandboxing, RAG, memory, evaluation, LLMs, foundation models" },
-    { "label": "AI Security", "items": "Prompt-injection defense, red teaming, guardrails, model gateways, misuse resistance, threat modeling" },
+    { "label": "AI Security", "items": "Prompt-injection defense, red teaming, guardrails, runtime protection, supply chain security, model gateways, misuse resistance, threat modeling" },
     { "label": "Engineering", "items": "Python, TypeScript, Go, Next.js, React, Node.js, distributed systems" },
     { "label": "Cloud/DevOps", "items": "Azure, AWS, Kubernetes, Docker, Terraform, CI/CD, observability" },
     { "label": "Leadership", "items": "Technical strategy, architecture, mentoring, technical writing, executive communication" }

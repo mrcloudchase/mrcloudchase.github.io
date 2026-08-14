@@ -22,7 +22,7 @@ const skillCategories = [
   {
     name: 'AI Security',
     icon: Shield,
-    skills: ['Prompt-injection defense', 'Red teaming', 'Guardrails', 'Misuse resistance', 'Threat modeling'],
+    skills: ['Prompt-injection defense', 'Red teaming', 'Guardrails', 'Runtime protection', 'Supply chain security', 'Misuse resistance', 'Threat modeling'],
   },
   {
     name: 'AI & ML',
