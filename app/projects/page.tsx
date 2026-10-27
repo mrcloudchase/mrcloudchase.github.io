@@ -4,10 +4,10 @@ import { ProjectCard } from '@/components/ProjectCard'
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Open source projects and tools for cloud architecture, AI engineering, and DevOps.',
+  description: 'Open source projects and tools for AI engineering, agentic systems, and AI security.',
   openGraph: {
     title: 'Projects',
-    description: 'Open source projects and tools for cloud architecture, AI engineering, and DevOps.',
+    description: 'Open source projects and tools for AI engineering, agentic systems, and AI security.',
   },
   alternates: {
     canonical: '/projects/',

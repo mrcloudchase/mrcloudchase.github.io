@@ -26,7 +26,7 @@ Chase Dovey's personal website and blog, built with Next.js 16 (App Router), Typ
 | `npm run build` | Generate resume PDF, build static site to `out/`, and generate sitemap |
 | `npm run lint` | Run ESLint |
 | `npm run type-check` | Run TypeScript compiler (no emit) |
-| `npm run fetch-content` | Clone/pull blog content from mrcloudchase-blog repo |
+| `npm run fetch-content` | Delete and re-clone blog content from mrcloudchase-blog repo |
 | `npm run generate-resume` | Generate ATS-optimized resume PDF from `lib/resume-data.json` |
 
 Always run `npm run type-check` and `npm run lint` before considering work complete.
@@ -76,7 +76,7 @@ public/                 Static assets (images, resume PDF, robots.txt, llms.txt)
 
 **Dark Theme:** The site uses a terminal/hacker aesthetic. All UI uses dark backgrounds (`surface-700` through `surface-900`), neon green (`neon-500`) as primary, cyan (`cyber-500`) as secondary, and purple (`purple-500`) as accent. Headings use JetBrains Mono font.
 
-**Dynamic Projects:** Projects are fetched from the GitHub API (`users/mrcloudchase/repos`) at build time. An `overrides` map in `lib/projects.ts` controls featured status, custom descriptions, demo URLs, and hidden repos. Forks are hidden by default unless overridden.
+**Dynamic Projects:** Projects are fetched from the GitHub API at build time from three sources (`users/mrcloudchase`, `orgs/averagejoeslab`, `orgs/Odovey-Consulting`), de-duplicated, and sorted by most recent push. An `overrides` map in `lib/projects.ts` controls featured status, custom descriptions, demo URLs, and hidden repos. Forks are hidden by default unless overridden.
 
 **Resume PDF:** The downloadable resume PDF is generated at build time from `lib/resume-data.json` using Playwright. The same JSON file drives the web resume page. Update the JSON to change both. The PDF uses ATS/HRIS-optimized formatting (Arial font, standard headings, no table layouts, US Letter size). Experience entries in the JSON must be ordered by start date, most recent first. When a company went through acquisitions, list all names separated by pipes (e.g., `"Linux Academy | A Cloud Guru | Pluralsight"`).
 

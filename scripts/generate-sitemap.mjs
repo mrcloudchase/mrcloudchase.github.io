@@ -1,5 +1,6 @@
-import { readdirSync, writeFileSync, existsSync } from 'node:fs'
+import { readdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
+import matter from 'gray-matter'
 
 const SITE_URL = 'https://cdovey.dev'
 
@@ -20,6 +21,9 @@ const postsDir = join(process.cwd(), 'content', 'blog', 'posts')
 if (existsSync(postsDir)) {
   const files = readdirSync(postsDir).filter((f) => f.endsWith('.md'))
   for (const file of files) {
+    // Drafts are not built in production, so they must not appear in the sitemap
+    const { data } = matter(readFileSync(join(postsDir, file), 'utf8'))
+    if (data.draft) continue
     // Strip YYYY-MM-DD- prefix and .md extension to get slug
     const slug = file.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '')
     blogSlugs.push(slug)

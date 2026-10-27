@@ -9,15 +9,14 @@
   "summary": "AI engineering leader specializing in the design and security of production agentic systems. I architect agent runtimes, tool execution and sandboxing, memory and retrieval, orchestration, and evaluation, then build the guardrails and red-teaming that keep them reliable in adversarial, high-consequence environments. At HiddenLayer I secure agentic systems for enterprise customers, instrumenting agentic workloads for runtime protection and building product for agentic red teaming and adversarial prompt engineering. I founded cAIge, the vendor-agnostic Certified AI Guardrail Engineer program, defining an industry taxonomy for prompt-injection defense, data-exfiltration prevention, and guardrail validation. Deep working knowledge of foundation-model internals and the math beneath them, backed by a decade of architecture, engineering, and technical leadership across enterprise and education at scale.",
   "experience": [
     {
-      "title": "AI Architect/Engineer (Agentic Systems Security)",
+      "title": "Forward Deployed AI Architect/Engineer",
       "company": "HiddenLayer",
       "period": "Oct 2025 – Present",
       "highlights": [
-        "Architect and secure production agentic systems for enterprise customers: agent loops, tool execution and sandboxing, memory and retrieval, and security boundaries, threat-modeling prompt injection, tool-output poisoning, and sandbox escape",
-        "Instrument agentic workloads for runtime protection against threats like prompt injection, and architect supply chain protections into CI/CD for secure model development",
-        "Build product for agentic red teaming and adversarial prompt engineering, generating multi-turn attack flows that surface misuse and failure modes in customer AI systems",
-        "Develop core platform capabilities and customer integrations, turning research prototypes into reliable, shipped product",
-        "Partner with enterprise customers to design secure AI applications and agents, advising on evaluation and guardrail strategy grounded in foundation-model internals"
+        "Secure model development by architecting supply chain protections into CI/CD",
+        "Instrument agentic workloads to provide runtime protection against security threats like prompt injection",
+        "Conduct agentic red teaming and hardening of LLM workloads",
+        "Collaborate with organizations to design secure AI applications and agents"
       ]
     },
     {
@@ -25,20 +24,21 @@
       "company": "Average Joes Lab",
       "period": "Jul 2025 – Present",
       "highlights": [
-        "Founded an open, community-driven research lab and lead its applied AI work: agent runtimes, episodic and semantic memory harnesses, sandboxed tool execution, and multi-provider inference gateways",
-        "Drove autonomous-research programs to systematically discover better context-management, memory, tool-use, planning, and orchestration strategies for agents",
-        "Built adversarial-AI research, including a generalized red-team agent and a zero-training, embedding-space prompt-injection detector",
-        "Authored a framework-free, code-first agentic-engineering curriculum and a research-engineering learning path, mentoring newcomers into independent research"
+        "Founded Average Joes Lab to create a community-driven platform for accessible scientific research",
+        "Developed a Research Engineering Learning Path, empowering newcomers to become independent scientists with essential research methodologies",
+        "Built an open-source platform facilitating collaborative projects in AI, ML, and various scientific fields",
+        "Advocated for open science practices, promoting transparency and community peer review to enhance research quality"
       ]
     },
     {
-      "title": "Chief Enterprise Architect",
+      "title": "Founder & Forward Deployed Engineer",
       "company": "Odovey Consulting",
       "period": "Jun 2025 – Present",
       "highlights": [
-        "Lead AI and cloud strategy for enterprise clients: AI agent development, RAG implementation, supervised fine-tuning, and AI model infrastructure",
-        "Authored a vendor-agnostic GenAI adoption framework for planning, governing, and scaling generative AI across the enterprise",
-        "Advise executives on AI architecture and adoption, aligning AI investments with security and measurable business outcomes"
+        "Founded Odovey Consulting and served as a Forward Deployed Engineer, focusing on agentic AI solutions",
+        "Developed a production-grade agent harness from scratch, enhancing model interface and control flow",
+        "Created an evaluation framework to objectively assess agent performance in isolated environments",
+        "Authored an 8-part technical series on agentic AI, covering critical topics like agent security and workload patterns"
       ]
     },
     {

@@ -4,10 +4,10 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Thoughts on cloud architecture, AI engineering, DevOps, and modern development.',
+  description: 'Deep dives on AI engineering, agentic systems, AI security, and how LLMs work.',
   openGraph: {
     title: 'Blog',
-    description: 'Thoughts on cloud architecture, AI engineering, DevOps, and modern development.',
+    description: 'Deep dives on AI engineering, agentic systems, AI security, and how LLMs work.',
   },
   alternates: {
     canonical: '/blog/',
@@ -29,7 +29,7 @@ export default function BlogPage() {
               <span className="text-neon-500 text-glow-green">blog</span>
             </h1>
             <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
-              Thoughts on cloud architecture, AI engineering, and building things that scale.
+              Deep dives on AI engineering, agentic systems, AI security, and how LLMs work.
             </p>
           </div>
         </div>
