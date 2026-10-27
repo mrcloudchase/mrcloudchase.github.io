@@ -42,12 +42,12 @@
       ]
     },
     {
-      "title": "Senior Content Developer",
+      "title": "Senior Context Developer",
       "company": "Microsoft",
       "period": "Aug 2024 – Oct 2025",
       "highlights": [
-        "Developed a workflow-based agentic authoring system using prompt orchestration, contextual grounding, and RAG, reducing time-to-first-draft from three days to under five minutes",
-        "Contributed to Azure Copilot evaluation by implementing LLM-as-a-judge methodologies and grading rubrics to assess accuracy, relevance, groundedness, and response quality",
+        "Developed an agentic authoring system that reduced time-to-first-draft from three days to under five minutes",
+        "Implemented agentic evaluations for Azure Copilot performance evaluation and content optimization",
         "Led Azure Container Registry technical enablement, creating scenario-driven content reaching more than 500K developers monthly",
         "Designed context and prompt frameworks that improved the reliability and usefulness of AI-powered developer experiences"
       ]
